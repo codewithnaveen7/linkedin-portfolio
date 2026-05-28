@@ -3,6 +3,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 OUT="$ROOT/dist"
+CNAME_FILE="$ROOT/public/CNAME"
 
 rm -rf "$OUT"
 mkdir -p "$OUT"
@@ -11,15 +12,27 @@ cp -r "$ROOT/public/images" "$OUT/images"
 if [ -f "$ROOT/public/Naveen-Singh-CV.pdf" ]; then
   cp "$ROOT/public/Naveen-Singh-CV.pdf" "$OUT/Naveen-Singh-CV.pdf"
 fi
+if [ -f "$CNAME_FILE" ]; then
+  cp "$CNAME_FILE" "$OUT/CNAME"
+fi
 touch "$OUT/.nojekyll"
 
 # GitHub Pages: project sites live at https://user.github.io/REPO_NAME/
-# Relative "images/..." wrongly resolves to https://user.github.io/images/...
-# Rewrite to absolute paths with the correct prefix.
+# Custom domains are served from the domain root (https://example.com/), not /REPO/.
+# Relative "images/..." can resolve to https://user.github.io/images/... without a trailing slash.
 IMAGE_PREFIX="/images/"
 SITE_PREFIX="/"
+USE_CUSTOM_DOMAIN=0
 
-if [ -n "${GITHUB_REPOSITORY:-}" ]; then
+if [ -f "$CNAME_FILE" ]; then
+  CUSTOM_DOMAIN="$(tr -d '[:space:]' < "$CNAME_FILE")"
+  if [ -n "$CUSTOM_DOMAIN" ]; then
+    USE_CUSTOM_DOMAIN=1
+    echo "Custom domain (public/CNAME) → root paths: ${IMAGE_PREFIX}"
+  fi
+fi
+
+if [ "$USE_CUSTOM_DOMAIN" -eq 0 ] && [ -n "${GITHUB_REPOSITORY:-}" ]; then
   OWNER="${GITHUB_REPOSITORY%%/*}"
   REPO="${GITHUB_REPOSITORY##*/}"
   if [ "$REPO" != "${OWNER}.github.io" ]; then

@@ -29,6 +29,7 @@ Personal portfolio site for **Naveen Singh**, Full Stack Developer & Team Lead. 
 ```
 ├── index.html
 ├── public/images/          # Profile + project screenshots
+├── public/CNAME            # Custom domain (root asset paths on build)
 ├── public/Naveen-Singh-CV.pdf  # CV (copied to site root on build)
 ├── Naveen-Singh-CV.pdf     # Symlink for local PHP dev (optional)
 ├── scripts/build-pages.sh  # Production build (GitHub Pages)
@@ -95,11 +96,15 @@ The workflow (`.github/workflows/deploy.yml`) builds `dist/` with `index.html` +
 | `YOUR_USERNAME.github.io` | `https://YOUR_USERNAME.github.io/` |
 | Any other repo (e.g. `portfolio`) | `https://YOUR_USERNAME.github.io/portfolio/` |
 
-The build rewrites image paths for your repo name (e.g. `/js/images/...` for `codewithnaveen7/js`). User-site repos (`username.github.io`) use `/images/...`.
+The build rewrites image paths for your repo name (e.g. `/linkedin-portfolio/images/...`). If `public/CNAME` is present (custom domain), paths use the site root (`/images/...`) so assets work at `https://naveensingh.codes/`.
 
 **Local preview matching GitHub:**
 
 ```bash
+# Custom domain (this repo)
+npm run build && npm run preview
+
+# github.io project URL without a custom domain
 GITHUB_REPOSITORY=codewithnaveen7/YOUR_REPO_NAME npm run build
 npm run preview
 ```
