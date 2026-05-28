@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Neural Architect | Senior MERN &amp; GenAI Developer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=JetBrains+Mono:wght@100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#3a3939",
+                        "on-tertiary-fixed": "#36003e",
+                        "on-surface-variant": "#c7c4d7",
+                        "on-primary": "#1000a9",
+                        "secondary-container": "#03b5d3",
+                        "on-primary-fixed": "#07006c",
+                        "on-secondary-container": "#00424e",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "inverse-primary": "#494bd6",
+                        "secondary-fixed": "#acedff",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "primary-fixed": "#e1e0ff",
+                        "on-primary-container": "#0d0096",
+                        "inverse-on-surface": "#313030",
+                        "primary-container": "#8083ff",
+                        "error": "#ffb4ab",
+                        "on-tertiary-container": "#4d0059",
+                        "secondary": "#4cd7f6",
+                        "tertiary": "#fbabff",
+                        "on-error-container": "#ffdad6",
+                        "surface": "#050505",
+                        "surface-container": "#0A0A0A",
+                        "tertiary-fixed-dim": "#fbabff",
+                        "on-secondary": "#003640",
+                        "background": "#050505",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "surface-dim": "#050505",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "on-tertiary-fixed-variant": "#7c008e",
+                        "surface-variant": "#1A1A1A",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-tint": "#c0c1ff",
+                        "on-surface": "#e5e2e1",
+                        "tertiary-container": "#e14ef6",
+                        "surface-container-highest": "#353534",
+                        "outline-variant": "#464554",
+                        "surface-container-low": "#1c1b1b",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary-fixed": "#ffd6fd",
+                        "primary": "#c0c1ff",
+                        "on-tertiary": "#580065",
+                        "outline": "#908fa0",
+                        "surface-container-lowest": "#0e0e0e",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#001f26",
+                        "on-background": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "48px",
+                        "section-gap": "120px",
+                        "container-max": "1280px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "16px",
+                        "stack-lg": "32px",
+                        "gutter": "24px",
+                        "stack-md": "16px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Geist"],
+                        "headline-lg": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "body-md": ["Geist"],
+                        "headline-md": ["Geist"],
+                        "label-md": ["JetBrains Mono"],
+                        "label-sm": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #050505; color: #e5e2e1; }
+        .glass-card {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(192, 193, 255, 0.3);
+            box-shadow: 0 0 30px rgba(192, 193, 255, 0.1);
+        }
+        .glow-button {
+            box-shadow: 0 0 15px rgba(192, 193, 255, 0.3);
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 25px rgba(192, 193, 255, 0.5);
+        }
+        .neural-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .skill-badge {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: -1px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, #464554, transparent);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+    </style>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<canvas class="neural-bg opacity-30" id="neuralCanvas"></canvas>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/10 shadow-[0_0_20px_rgba(192,193,255,0.15)] h-20">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop h-full">
+<div class="font-display-lg text-headline-md font-bold tracking-tighter text-primary">DevLab.AI</div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md cursor-pointer active:scale-95 transition-all" href="#projects">Projects</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md cursor-pointer active:scale-95" href="#experience">Experience</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md cursor-pointer active:scale-95" href="#ai-focus">AI Focus</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md cursor-pointer active:scale-95" href="#stack">Stack</a>
+</div>
+<div class="flex items-center gap-stack-md">
+<span class="hidden lg:block text-label-sm font-label-sm text-on-surface-variant">Building: NeuralOS v2</span>
+<button class="bg-primary text-on-primary px-stack-lg py-2 font-label-md rounded-full glow-button transition-all duration-300 active:scale-95">Hire Me</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="min-h-[819px] flex flex-col justify-center items-center text-center px-margin-mobile md:px-margin-desktop relative">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-variant/50 border border-outline-variant/30 text-secondary mb-stack-lg animate-pulse">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-label-sm uppercase tracking-widest">Neural Architect</span>
+</div>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg max-w-4xl mb-stack-md">
+                Architecting <span class="text-primary">Autonomous</span> Intelligence
+            </h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mb-stack-lg h-12">
+                Senior MERN Stack &amp; <span class="text-secondary border-r-2 border-secondary pr-1" id="typing-text"></span>
+</p>
+<div class="flex flex-col md:flex-row gap-stack-md">
+<a class="bg-primary text-on-primary px-8 py-4 font-label-md rounded-full glow-button text-center transition-all duration-300" href="#projects">View Projects</a>
+<a class="border border-outline-variant hover:border-primary px-8 py-4 font-label-md rounded-full text-center backdrop-blur-sm transition-all duration-300" href="#contact">Let's Collaborate</a>
+</div>
+<div class="absolute bottom-10 animate-bounce">
+<span class="material-symbols-outlined text-outline">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Stats Grid -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-section-gap">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="glass-card p-stack-lg flex flex-col items-center text-center rounded-xl">
+<span class="font-display-lg text-headline-lg text-primary">8+</span>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest">Years Exp</span>
+</div>
+<div class="glass-card p-stack-lg flex flex-col items-center text-center rounded-xl">
+<span class="font-display-lg text-headline-lg text-secondary">45+</span>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest">Projects</span>
+</div>
+<div class="glass-card p-stack-lg flex flex-col items-center text-center rounded-xl">
+<span class="font-display-lg text-headline-lg text-tertiary">12</span>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest">AI Apps Built</span>
+</div>
+<div class="glass-card p-stack-lg flex flex-col items-center text-center rounded-xl">
+<span class="font-display-lg text-headline-lg text-on-surface">20k+</span>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest">GitHub Stars</span>
+</div>
+</div>
+</section>
+<!-- Currently Building Banner -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-section-gap">
+<div class="glass-card rounded-2xl p-stack-md flex flex-col md:flex-row items-center justify-between border-primary/20 bg-primary/5 overflow-hidden relative group">
+<div class="flex items-center gap-stack-md z-10">
+<div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">memory</span>
+</div>
+<div>
+<h3 class="font-headline-md text-body-lg text-on-surface">NeuralOS v2</h3>
+<p class="font-label-sm text-on-surface-variant">The world's first AI-native Operating System core</p>
+</div>
+</div>
+<div class="flex items-center gap-stack-md mt-stack-md md:mt-0 z-10">
+<span class="text-label-sm text-primary font-bold">BETA ACCESS AVAILABLE</span>
+<button class="bg-surface-variant hover:bg-surface-bright text-on-surface px-6 py-2 rounded-lg transition-all">Learn More</button>
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+</div>
+</section>
+<!-- About & Experience -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-section-gap grid md:grid-cols-2 gap-24" id="experience">
+<div>
+<span class="font-label-sm text-secondary uppercase tracking-[0.2em] mb-stack-md block">The Architect</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-stack-lg">Merging Full-Stack Engineering with Cognitive Computing.</h2>
+<p class="font-body-lg text-on-surface-variant mb-stack-lg">
+                    I specialize in building production-grade applications where neural networks aren't just an add-on, but the core engine. From designing multi-agent RAG pipelines to optimizing real-time data flow in distributed MERN environments, I bridge the gap between research and deployment.
+                </p>
+<div class="grid grid-cols-2 gap-gutter">
+<div class="p-stack-md border-l-2 border-primary/30">
+<h4 class="font-label-md text-on-surface mb-1">Architecture</h4>
+<p class="text-label-sm text-on-surface-variant leading-relaxed">Highly scalable microservices with event-driven data flows.</p>
+</div>
+<div class="p-stack-md border-l-2 border-secondary/30">
+<h4 class="font-label-md text-on-surface mb-1">LLM Ops</h4>
+<p class="text-label-sm text-on-surface-variant leading-relaxed">Automated fine-tuning and evaluation pipelines for LLMs.</p>
+</div>
+</div>
+</div>
+<div class="relative pl-12 timeline-line">
+<div class="space-y-16">
+<!-- Exp 1 -->
+<div class="relative">
+<div class="absolute -left-[53px] top-1 w-3 h-3 rounded-full border-2 border-primary bg-surface shadow-[0_0_10px_#c0c1ff]"></div>
+<span class="font-label-sm text-primary mb-2 block">2022 — Present</span>
+<h3 class="font-headline-md text-body-lg text-on-surface mb-1">Lead AI Engineer</h3>
+<p class="font-label-md text-on-surface-variant mb-stack-md">Cognition Labs / San Francisco</p>
+<p class="font-body-md text-on-surface-variant">Leading the development of autonomous agentic frameworks using LangChain and specialized vector databases. Scaling Node.js clusters to handle millions of real-time AI inferences.</p>
+</div>
+<!-- Exp 2 -->
+<div class="relative">
+<div class="absolute -left-[53px] top-1 w-3 h-3 rounded-full border-2 border-secondary bg-surface"></div>
+<span class="font-label-sm text-secondary mb-2 block">2020 — 2022</span>
+<h3 class="font-headline-md text-body-lg text-on-surface mb-1">Senior MERN Developer</h3>
+<p class="font-label-md text-on-surface-variant mb-stack-md">NeuralFlow / London</p>
+<p class="font-body-md text-on-surface-variant">Architected the core SaaS platform from 0 to 1 using React/Next.js and MongoDB. Implemented complex real-time collaboration features using WebSockets and Redis.</p>
+</div>
+<!-- Exp 3 -->
+<div class="relative">
+<div class="absolute -left-[53px] top-1 w-3 h-3 rounded-full border-2 border-outline bg-surface"></div>
+<span class="font-label-sm text-on-surface-variant mb-2 block">2018 — 2020</span>
+<h3 class="font-headline-md text-body-lg text-on-surface mb-1">Full Stack Developer</h3>
+<p class="font-label-md text-on-surface-variant mb-stack-md">StackBuild / Berlin</p>
+<p class="font-body-md text-on-surface-variant">Developed enterprise-level web applications focusing on performance optimization and security audits.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Grid -->
+<section class="bg-surface-container py-section-gap mb-section-gap" id="stack">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-stack-md">Technical Arsenals</h2>
+<p class="font-body-lg text-on-surface-variant">Proprietary stacks and cutting-edge integrations.</p>
+</div>
+<div class="grid md:grid-cols-4 gap-gutter">
+<!-- Frontend -->
+<div class="glass-card p-stack-lg rounded-xl">
+<div class="text-secondary mb-stack-md"><span class="material-symbols-outlined text-4xl">dvr</span></div>
+<h3 class="font-label-md text-on-surface mb-stack-md uppercase tracking-widest">Frontend</h3>
+<div class="flex flex-wrap gap-2">
+<span class="skill-badge bg-secondary/10 text-secondary border border-secondary/20 px-3 py-1 rounded text-label-sm">React</span>
+<span class="skill-badge bg-secondary/10 text-secondary border border-secondary/20 px-3 py-1 rounded text-label-sm">Next.js</span>
+<span class="skill-badge bg-secondary/10 text-secondary border border-secondary/20 px-3 py-1 rounded text-label-sm">Tailwind</span>
+<span class="skill-badge bg-secondary/10 text-secondary border border-secondary/20 px-3 py-1 rounded text-label-sm">TypeScript</span>
+</div>
+</div>
+<!-- Backend -->
+<div class="glass-card p-stack-lg rounded-xl">
+<div class="text-primary mb-stack-md"><span class="material-symbols-outlined text-4xl">terminal</span></div>
+<h3 class="font-label-md text-on-surface mb-stack-md uppercase tracking-widest">Backend</h3>
+<div class="flex flex-wrap gap-2">
+<span class="skill-badge bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded text-label-sm">Node.js</span>
+<span class="skill-badge bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded text-label-sm">Laravel</span>
+<span class="skill-badge bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded text-label-sm">Python</span>
+<span class="skill-badge bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded text-label-sm">Go</span>
+</div>
+</div>
+<!-- AI/LLM -->
+<div class="glass-card p-stack-lg rounded-xl border-tertiary/30">
+<div class="text-tertiary mb-stack-md"><span class="material-symbols-outlined text-4xl">psychology</span></div>
+<h3 class="font-label-md text-on-surface mb-stack-md uppercase tracking-widest">AI / LLM</h3>
+<div class="flex flex-wrap gap-2">
+<span class="skill-badge bg-tertiary/10 text-tertiary border border-tertiary/20 px-3 py-1 rounded text-label-sm">OpenAI</span>
+<span class="skill-badge bg-tertiary/10 text-tertiary border border-tertiary/20 px-3 py-1 rounded text-label-sm">LangChain</span>
+<span class="skill-badge bg-tertiary/10 text-tertiary border border-tertiary/20 px-3 py-1 rounded text-label-sm">VectorDB</span>
+<span class="skill-badge bg-tertiary/10 text-tertiary border border-tertiary/20 px-3 py-1 rounded text-label-sm">LlamaIndex</span>
+</div>
+</div>
+<!-- DevOps -->
+<div class="glass-card p-stack-lg rounded-xl">
+<div class="text-on-surface mb-stack-md"><span class="material-symbols-outlined text-4xl">settings_ethernet</span></div>
+<h3 class="font-label-md text-on-surface mb-stack-md uppercase tracking-widest">Infra</h3>
+<div class="flex flex-wrap gap-2">
+<span class="skill-badge bg-on-surface/10 text-on-surface border border-on-surface/20 px-3 py-1 rounded text-label-sm">Docker</span>
+<span class="skill-badge bg-on-surface/10 text-on-surface border border-on-surface/20 px-3 py-1 rounded text-label-sm">AWS</span>
+<span class="skill-badge bg-on-surface/10 text-on-surface border border-on-surface/20 px-3 py-1 rounded text-label-sm">Kubernetes</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-section-gap" id="projects">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-stack-lg mb-16">
+<div>
+<span class="font-label-sm text-primary uppercase tracking-[0.2em] mb-stack-md block">Selected Work</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Building the Future</h2>
+</div>
+<div class="flex gap-stack-md border-b border-white/10 pb-2 overflow-x-auto">
+<button class="font-label-md text-primary border-b-2 border-primary pb-2 px-4">All</button>
+<button class="font-label-md text-on-surface-variant hover:text-on-surface transition-colors pb-2 px-4">AI Focus</button>
+<button class="font-label-md text-on-surface-variant hover:text-on-surface transition-colors pb-2 px-4">SaaS</button>
+<button class="font-label-md text-on-surface-variant hover:text-on-surface transition-colors pb-2 px-4">MERN</button>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-gutter">
+<!-- Project 1 -->
+<div class="glass-card rounded-2xl overflow-hidden group">
+<div class="h-64 overflow-hidden">
+<img alt="Agentic CRM" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A high-tech digital dashboard interface for an Agentic CRM, featuring glowing nodes, complex data visualizations, and neon-blue line graphs against a deep obsidian background. The visual style is ultra-modern and cinematic, suggesting high-performance AI computation and sleek user experience. Deep indigo and electric cyan light accents illuminate the frosted glass UI elements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATGouDTN4ULTh3OG0BJXNSYIN_8MhsWcJWj7JEVMuHIiTOF1PNHujH68VLX7c1n4k9g1xqTULqbrPCU4T7Pp8OB682oy-oBJKtL2s4TZYBU0joLib7Dj3O1jOhx2CobE7kGfGMZH9nf-d_gHuvdE9TpVQKpDoevztltiNkvSPeNc5u24v-Ut4hHSZwhnkDQfAZVgDO-tOjm3ctBy4QYpZa2NYNhWYmKzosUg-6VNGJ_H6eEOm2ozM331QTAdjwt3w0KS6pBQ4j-zA"/>
+</div>
+<div class="p-stack-lg">
+<div class="flex justify-between items-start mb-stack-md">
+<h3 class="font-headline-md text-body-lg text-on-surface">Agentic CRM</h3>
+<span class="material-symbols-outlined text-primary">arrow_outward</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-stack-md line-clamp-2">Self-healing customer relationship manager powered by multi-agent reasoning loops.</p>
+<div class="flex gap-2">
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary">LangChain</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary">Next.js</span>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="glass-card rounded-2xl overflow-hidden group">
+<div class="h-64 overflow-hidden">
+<img alt="VectorDB Visualizer" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A futuristic 3D visualization of a Vector Database, showing thousands of luminous data points suspended in a dark vacuum. Shimmering connection lines bridge related nodes in a neural-like web. The mood is scientific and mysterious, with a color palette of deep violets, magentas, and dark grays. Soft volumetric lighting creates depth and a sense of infinite digital space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWjPEBxnWgqxdR_DliZOx4IHrCvfm5RhV3pP3qkFEcHOLDYyAij7EXnVTINmXuKZi5ZbRGFkcbuyH7r4K35v2FmbtAWWbgpMHKU06R1WfJLSXdKAHiJhYSojVUClYWc75_mdqPfxmSEt55xgAFlXhJRpaNFcVpM3zWrpaJ2ekX7avFxA0JNH7sFuRbuBraXMhEt0PBUNEoEL7m9T9eo4oCSKB5_uUQVCpPmvWGgclV3QETkMiBrdy6Y3ZFssTpkjjkJQt1EdS0iug"/>
+</div>
+<div class="p-stack-lg">
+<div class="flex justify-between items-start mb-stack-md">
+<h3 class="font-headline-md text-body-lg text-on-surface">VectorDB Visualizer</h3>
+<span class="material-symbols-outlined text-primary">arrow_outward</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-stack-md line-clamp-2">Real-time 3D embedding projector for Pinecone and Milvus clusters.</p>
+<div class="flex gap-2">
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary">Three.js</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary">Node.js</span>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="glass-card rounded-2xl overflow-hidden group">
+<div class="h-64 overflow-hidden">
+<img alt="RAG Orchestrator" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="An abstract representation of a RAG pipeline orchestrator, depicting a complex sequence of interconnected glass blocks representing data retrieval, processing, and generation nodes. Glowing liquid-like light flows through transparent pipes between the blocks. The aesthetic is extremely high-end, featuring subtle metallic textures and a monochromatic dark theme punctuated by intense white and silver glows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnxNXH6l7RLdoZTVzzTpq9s1y8gNt8hSl1912YEBw_ijNxVlxM0_t1dTO_0gLqBwQ-4kf7kJsTyJGPfbIEt6iMSIQar6lHzdSV7pyI6a4pkpegKq87JrOxp3VegaBt9EXwIv9YOgHBT9vQC1-Yqt56KlnC2FHSDz5XaJyJo0miRvdOrITHKjlTDFdvAA9hAgKl0OGc469N5lRJzoD8QMtF5Nb0uZ8ZVnaP2V9nkpCv2Kuq68pw9ooE54kf9fGxS47LiPcKtcuWRDI"/>
+</div>
+<div class="p-stack-lg">
+<div class="flex justify-between items-start mb-stack-md">
+<h3 class="font-headline-md text-body-lg text-on-surface">RAG Pipeline</h3>
+<span class="material-symbols-outlined text-primary">arrow_outward</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-stack-md line-clamp-2">Enterprise-grade Retrieval Augmented Generation framework for low-latency search.</p>
+<div class="flex gap-2">
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-tertiary/30 rounded text-tertiary">Python</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-tertiary/30 rounded text-tertiary">FastAPI</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Showcase -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-section-gap relative overflow-hidden" id="ai-focus">
+<div class="bg-gradient-to-b from-primary/5 to-transparent p-12 rounded-[40px] border border-primary/10">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-stack-md">The AI Pipeline</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Visualizing the logic behind autonomous systems.</p>
+</div>
+<div class="relative flex flex-col md:flex-row items-center justify-center gap-12">
+<!-- Step 1 -->
+<div class="glass-card p-stack-lg rounded-2xl w-full max-w-xs relative z-10 animate-float" style="animation-delay: 0s;">
+<span class="font-label-sm text-secondary mb-2 block">Step 01</span>
+<h4 class="font-headline-md text-body-lg text-on-surface mb-2">Ingestion</h4>
+<p class="text-label-sm text-on-surface-variant">Multi-modal data collection from scattered enterprise silos.</p>
+</div>
+<!-- Connection -->
+<div class="hidden md:block w-20 h-0.5 bg-gradient-to-r from-secondary to-primary relative">
+<div class="absolute -right-1 -top-1 w-2 h-2 bg-primary rounded-full animate-ping"></div>
+</div>
+<!-- Step 2 -->
+<div class="glass-card p-stack-lg rounded-2xl w-full max-w-xs relative z-10 animate-float" style="animation-delay: 1s;">
+<span class="font-label-sm text-primary mb-2 block">Step 02</span>
+<h4 class="font-headline-md text-body-lg text-on-surface mb-2">Cognition</h4>
+<p class="text-label-sm text-on-surface-variant">Semantic chunking and embedding into high-dimensional vector space.</p>
+</div>
+<!-- Connection -->
+<div class="hidden md:block w-20 h-0.5 bg-gradient-to-r from-primary to-tertiary relative">
+<div class="absolute -right-1 -top-1 w-2 h-2 bg-tertiary rounded-full animate-ping"></div>
+</div>
+<!-- Step 3 -->
+<div class="glass-card p-stack-lg rounded-2xl w-full max-w-xs relative z-10 animate-float" style="animation-delay: 2s;">
+<span class="font-label-sm text-tertiary mb-2 block">Step 03</span>
+<h4 class="font-headline-md text-body-lg text-on-surface mb-2">Execution</h4>
+<p class="text-label-sm text-on-surface-variant">Agentic reasoning loops delivering verifiable outcomes.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-section-gap overflow-hidden">
+<h2 class="font-headline-lg text-center mb-16">Ecosystem Feedback</h2>
+<div class="flex gap-gutter animate-marquee py-8">
+<div class="glass-card p-stack-lg rounded-xl min-w-[350px] shrink-0">
+<p class="font-body-md text-on-surface italic mb-stack-md text-on-surface-variant">"The most forward-thinking developer I've partnered with. NeuralOS is a masterpiece of AI integration."</p>
+<div class="flex items-center gap-stack-md">
+<div class="w-10 h-10 rounded-full bg-primary/20"></div>
+<div>
+<p class="font-label-md text-on-surface">Marcus Thorne</p>
+<p class="text-[10px] text-on-surface-variant">CTO, SynthX</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-stack-lg rounded-xl min-w-[350px] shrink-0">
+<p class="font-body-md text-on-surface italic mb-stack-md text-on-surface-variant">"Mastery over both the MERN stack and GenAI is a rare find. Efficiency improved by 300%."</p>
+<div class="flex items-center gap-stack-md">
+<div class="w-10 h-10 rounded-full bg-secondary/20"></div>
+<div>
+<p class="font-label-md text-on-surface">Sarah Chen</p>
+<p class="text-[10px] text-on-surface-variant">Venture Partner, AI First</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-stack-lg rounded-xl min-w-[350px] shrink-0">
+<p class="font-body-md text-on-surface italic mb-stack-md text-on-surface-variant">"Incredible eye for UI detail combined with deep backend architectural knowledge."</p>
+<div class="flex items-center gap-stack-md">
+<div class="w-10 h-10 rounded-full bg-tertiary/20"></div>
+<div>
+<p class="font-label-md text-on-surface">Alex Rivera</p>
+<p class="text-[10px] text-on-surface-variant">Founder, VectorFlow</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-section-gap grid md:grid-cols-2 gap-24" id="contact">
+<div>
+<h2 class="font-headline-lg mb-stack-md">Initiate Collaboration</h2>
+<p class="font-body-lg text-on-surface-variant mb-12">Whether you're looking to build an AI-native product or scale existing infrastructure, let's talk.</p>
+<form class="space-y-stack-lg">
+<div class="relative">
+<label class="font-label-sm text-on-surface-variant uppercase mb-2 block">Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 transition-all font-body-md text-on-surface px-0 py-2" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-sm text-on-surface-variant uppercase mb-2 block">Email</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 transition-all font-body-md text-on-surface px-0 py-2" type="email"/>
+</div>
+<div class="relative">
+<label class="font-label-sm text-on-surface-variant uppercase mb-2 block">Subject</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 transition-all font-body-md text-on-surface px-0 py-2" type="text"/>
+</div>
+<button class="bg-primary text-on-primary px-12 py-4 rounded-full font-label-md glow-button transition-all">Send Transmission</button>
+</form>
+</div>
+<div class="glass-card rounded-[32px] p-stack-lg flex flex-col justify-center items-center text-center">
+<div class="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mb-stack-lg">
+<span class="material-symbols-outlined text-4xl text-primary">calendar_month</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-stack-md">Direct Sync</h3>
+<p class="font-body-md text-on-surface-variant mb-stack-lg max-w-xs">Prefer a quick call? Book a 30-minute consultation directly into my calendar.</p>
+<div class="w-full bg-surface-variant/30 aspect-square rounded-xl flex items-center justify-center border border-outline-variant/30 relative group cursor-pointer">
+<span class="font-label-sm text-on-surface-variant">CALENDLY INTERFACE PLACEHOLDER</span>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface border-t border-white/5 w-full py-stack-lg">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-desktop gap-stack-md">
+<div class="font-display-lg text-body-lg font-bold text-primary">DevLab.AI</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm text-center md:text-left">
+                © 2024 DevLab.AI • Engineered for the Future
+            </div>
+<div class="flex gap-stack-lg">
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-sm transition-all duration-200" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-sm transition-all duration-200" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-sm transition-all duration-200" href="#">Twitter</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-sm transition-all duration-200" href="#">Medium</a>
+</div>
+</div>
+</footer>
+<script>
+        // Typing Animation
+        const phrases = ["Building Autonomous Agents", "Scaling Neural Architectures", "Crafting Full-Stack Intelligence"];
+        let i = 0;
+        let j = 0;
+        let currentPhrase = [];
+        let isDeleting = false;
+        let speed = 100;
+
+        function loop() {
+            const typingText = document.getElementById("typing-text");
+            if(!typingText) return;
+
+            if (i < phrases.length) {
+                if (!isDeleting && j <= phrases[i].length) {
+                    currentPhrase.push(phrases[i][j]);
+                    j++;
+                    typingText.innerHTML = currentPhrase.join("");
+                }
+
+                if (isDeleting && j <= phrases[i].length) {
+                    currentPhrase.pop(phrases[i][j]);
+                    j--;
+                    typingText.innerHTML = currentPhrase.join("");
+                }
+
+                if (j == phrases[i].length) {
+                    isDeleting = true;
+                    speed = 2000; // Pause at end
+                }
+
+                if (isDeleting && j == 0) {
+                    currentPhrase = [];
+                    isDeleting = false;
+                    i++;
+                    speed = 100;
+                    if (i == phrases.length) i = 0;
+                }
+            }
+            const actualSpeed = isDeleting ? 50 : (speed === 2000 ? 2000 : 100);
+            if(speed === 2000) speed = 100; 
+            setTimeout(loop, actualSpeed);
+        }
+        loop();
+
+        // Neural Network Background Canvas
+        const canvas = document.getElementById('neuralCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function init() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            particles = [];
+            for (let i = 0; i < 80; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5,
+                    size: Math.random() * 2
+                });
+            }
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#c0c1ff';
+            ctx.strokeStyle = '#c0c1ff';
+            
+            particles.forEach((p, index) => {
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fill();
+
+                for (let j = index + 1; j < particles.length; j++) {
+                    const p2 = particles[j];
+                    const dx = p.x - p2.x;
+                    const dy = p.y - p2.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < 150) {
+                        ctx.lineWidth = 0.2;
+                        ctx.globalAlpha = 1 - (dist / 150);
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                        ctx.globalAlpha = 1;
+                    }
+                }
+            });
+            requestAnimationFrame(draw);
+        }
+
+        window.addEventListener('resize', init);
+        init();
+        draw();
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,14 @@
+{
+  "name": "naveen-singh-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Naveen Singh — Full Stack Developer & Technical Architect portfolio",
+  "scripts": {
+    "dev": "vite",
+    "build": "bash scripts/build-pages.sh",
+    "preview": "npx --yes serve dist -p 4173"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}

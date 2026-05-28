@@ -1,0 +1,2095 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Naveen Singh — Full Stack Developer &amp; Team Lead with 6+ years building scalable web apps, microservices, and cloud systems. Open to full-time opportunities." name="description"/>
+<title>Naveen Singh | Full Stack Developer &amp; Team Lead</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=JetBrains+Mono:wght@100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#3a3939",
+                        "on-tertiary-fixed": "#36003e",
+                        "on-surface-variant": "#c7c4d7",
+                        "on-primary": "#1000a9",
+                        "secondary-container": "#03b5d3",
+                        "on-primary-fixed": "#07006c",
+                        "on-secondary-container": "#00424e",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "inverse-primary": "#494bd6",
+                        "secondary-fixed": "#acedff",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "primary-fixed": "#e1e0ff",
+                        "on-primary-container": "#0d0096",
+                        "inverse-on-surface": "#313030",
+                        "primary-container": "#8083ff",
+                        "error": "#ffb4ab",
+                        "on-tertiary-container": "#4d0059",
+                        "secondary": "#4cd7f6",
+                        "tertiary": "#fbabff",
+                        "on-error-container": "#ffdad6",
+                        "surface": "#050505",
+                        "surface-container": "#0A0A0A",
+                        "tertiary-fixed-dim": "#fbabff",
+                        "on-secondary": "#003640",
+                        "background": "#050505",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "surface-dim": "#050505",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "on-tertiary-fixed-variant": "#7c008e",
+                        "surface-variant": "#1A1A1A",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-tint": "#c0c1ff",
+                        "on-surface": "#e5e2e1",
+                        "tertiary-container": "#e14ef6",
+                        "surface-container-highest": "#353534",
+                        "outline-variant": "#464554",
+                        "surface-container-low": "#1c1b1b",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary-fixed": "#ffd6fd",
+                        "primary": "#c0c1ff",
+                        "on-tertiary": "#580065",
+                        "outline": "#908fa0",
+                        "surface-container-lowest": "#0e0e0e",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#001f26",
+                        "on-background": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "48px",
+                        "section-gap": "120px",
+                        "container-max": "1280px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "16px",
+                        "stack-lg": "32px",
+                        "gutter": "24px",
+                        "stack-md": "16px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Geist"],
+                        "headline-lg": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "body-md": ["Geist"],
+                        "headline-md": ["Geist"],
+                        "label-md": ["JetBrains Mono"],
+                        "label-sm": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body { background-color: #050505; color: #e5e2e1; overflow-x: hidden; }
+        main { overflow-x: hidden; max-width: 100%; }
+        .project-slider-slide img {
+            max-width: none;
+        }
+
+        .glass-card {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: border-color 0.4s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        @media (hover: hover) {
+            .glass-card {
+                transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            }
+            .glass-card:hover {
+                border-color: rgba(192, 193, 255, 0.3);
+                box-shadow: 0 10px 40px rgba(192, 193, 255, 0.15);
+                transform: translateY(-4px);
+            }
+        }
+        .glow-button {
+            box-shadow: 0 0 15px rgba(192, 193, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 25px rgba(192, 193, 255, 0.5);
+            filter: brightness(1.1);
+        }
+        .neural-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+        .skill-badge {
+            font-family: 'JetBrains Mono', monospace;
+            transition: all 0.2s ease;
+        }
+        .skill-badge:hover {
+            transform: scale(1.05);
+            filter: brightness(1.2);
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: -1px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, #464554, transparent);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Project cards: visible when projects section is in view (no nested reveal) */
+        #projects.active #projects-list > article {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #projects-list > article {
+            opacity: 1;
+            transform: none;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+            max-width: 100%;
+        }
+        #projects-list {
+            width: 100%;
+            max-width: 100%;
+        }
+        .project-card-grid {
+            min-width: 0;
+            width: 100%;
+        }
+        .project-slider-col {
+            min-width: 0;
+            width: 100%;
+            max-width: 100%;
+        }
+        .project-slider {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+        }
+        .project-slider-viewport {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 100%;
+            border-radius: 0.75rem;
+            border: 1px solid rgba(192, 193, 255, 0.4);
+            background: #1a1a22;
+            aspect-ratio: 4 / 3;
+            min-height: 200px;
+            max-height: min(56vw, 420px);
+            touch-action: pan-x pinch-zoom;
+        }
+        @media (min-width: 640px) {
+            .project-slider-viewport {
+                min-height: 240px;
+                max-height: min(48vw, 480px);
+            }
+        }
+        @media (min-width: 1024px) {
+            .project-slider-viewport {
+                max-height: none;
+                aspect-ratio: 4 / 3;
+            }
+        }
+        .project-slider-track {
+            display: flex;
+            height: 100%;
+            transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: transform;
+        }
+        .project-slider-slide {
+            flex: 0 0 auto;
+            height: 100%;
+            position: relative;
+            box-sizing: border-box;
+        }
+        .project-slider-slide img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            display: block;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+        .project-slider-btn {
+            position: absolute;
+            top: 50%;
+            z-index: 2;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(192, 193, 255, 0.35);
+            background: rgba(10, 10, 15, 0.75);
+            color: #c0c1ff;
+            cursor: pointer;
+            transition: background 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+        }
+        .project-slider-btn:hover {
+            background: rgba(73, 75, 214, 0.9);
+            border-color: #c0c1ff;
+        }
+        .project-slider-btn--prev { left: 0.75rem; }
+        .project-slider-btn--next { right: 0.75rem; }
+        .project-slider-footer {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 0.75rem;
+        }
+        .project-slider-previews {
+            display: flex;
+            gap: 0.5rem;
+            flex: 1;
+            min-width: 0;
+            overflow-x: auto;
+            padding: 2px 0 4px;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(192, 193, 255, 0.35) transparent;
+        }
+        .project-slider-previews::-webkit-scrollbar {
+            height: 4px;
+        }
+        .project-slider-previews::-webkit-scrollbar-thumb {
+            background: rgba(192, 193, 255, 0.35);
+            border-radius: 4px;
+        }
+        .project-slider-preview {
+            flex: 0 0 4.5rem;
+            width: 4.5rem;
+            height: 3rem;
+            padding: 0;
+            border: 2px solid transparent;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0.55;
+            background: #c0c1ff;
+            transition: opacity 0.2s ease, border-color 0.2s ease;
+        }
+        .project-slider-preview:hover {
+            opacity: 0.85;
+        }
+        .project-slider-preview.active {
+            opacity: 1;
+            border-color: #494bd6;
+        }
+        .project-slider-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            display: block;
+            pointer-events: none;
+        }
+        .project-slider-counter {
+            flex-shrink: 0;
+            font-size: 0.6875rem;
+            font-family: var(--font-mono, ui-monospace, monospace);
+            letter-spacing: 0.08em;
+            color: rgba(192, 193, 255, 0.65);
+            min-width: 2.75rem;
+            text-align: right;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 15px rgba(192, 193, 255, 0.1); border-color: rgba(192, 193, 255, 0.1); }
+            50% { box-shadow: 0 0 30px rgba(192, 193, 255, 0.3); border-color: rgba(192, 193, 255, 0.4); }
+        }
+        .animate-pulse-glow { animation: pulse-glow 3s infinite ease-in-out; }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+
+        .skill-card {
+            min-height: 13.5rem;
+        }
+        .skill-card .skill-badges {
+            flex: 1;
+            align-content: flex-start;
+        }
+        .skill-card .skill-badge {
+            white-space: nowrap;
+        }
+
+        #typing-text::after {
+            content: '|';
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .site-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+        .site-logo:hover {
+            opacity: 0.9;
+        }
+        .site-logo__mark {
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            color: #c0c1ff;
+            border: 1px solid rgba(192, 193, 255, 0.35);
+            border-radius: 0.375rem;
+            padding: 0.45rem 0.5rem;
+            line-height: 1;
+            background: rgba(192, 193, 255, 0.06);
+        }
+        .site-logo__text {
+            font-family: Geist, system-ui, sans-serif;
+            font-weight: 700;
+            font-size: 1.3125rem;
+            letter-spacing: -0.035em;
+            line-height: 1;
+        }
+        .site-logo__given {
+            color: #e5e2e1;
+        }
+        .site-logo__family {
+            color: #c0c1ff;
+        }
+
+        .profile-photo-wrap {
+            position: relative;
+            margin-bottom: 1.75rem;
+        }
+        .profile-photo-wrap::before {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: 9999px;
+            background: linear-gradient(135deg, rgba(192, 193, 255, 0.7), rgba(76, 215, 246, 0.5));
+            opacity: 0.55;
+            z-index: 0;
+        }
+        .profile-photo {
+            position: relative;
+            z-index: 1;
+            width: 8.5rem;
+            height: 8.5rem;
+            border-radius: 9999px;
+            object-fit: cover;
+            object-position: center top;
+            border: 2px solid rgba(192, 193, 255, 0.45);
+            background: #1a1a1a;
+            box-shadow: 0 0 48px rgba(192, 193, 255, 0.2);
+        }
+        .profile-photo-fallback {
+            position: relative;
+            z-index: 1;
+            width: 8.5rem;
+            height: 8.5rem;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            color: #c0c1ff;
+            border: 2px solid rgba(192, 193, 255, 0.45);
+            background: linear-gradient(160deg, #1c1b2e 0%, #0a0a0a 100%);
+            box-shadow: 0 0 48px rgba(192, 193, 255, 0.2);
+        }
+        .profile-photo-fallback.hidden {
+            display: none;
+        }
+        .about-intro-grid {
+            align-items: stretch;
+        }
+        .profile-about-compact {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            width: 100%;
+            max-width: 13rem;
+            min-height: 20rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media (min-width: 1024px) {
+            .profile-about-compact {
+                width: 13rem;
+                max-width: none;
+                min-height: 100%;
+                height: auto;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+        .profile-about-compact::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 1rem;
+            background: linear-gradient(135deg, rgba(192, 193, 255, 0.5), rgba(76, 215, 246, 0.35));
+            opacity: 0.5;
+            z-index: 0;
+        }
+        .profile-about-compact .profile-about-img,
+        .profile-about-compact .profile-about-fallback {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            flex: 1 1 auto;
+            min-height: 20rem;
+            height: 100%;
+            border-radius: 0.875rem;
+            object-fit: cover;
+            object-position: center top;
+            background: #1a1a1a;
+            border: 1px solid rgba(192, 193, 255, 0.25);
+        }
+        @media (min-width: 1024px) {
+            .profile-about-compact .profile-about-img,
+            .profile-about-compact .profile-about-fallback {
+                min-height: 100%;
+            }
+        }
+        .profile-about-compact .profile-about-fallback {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            font-size: 1.5rem;
+            color: #c0c1ff;
+            background: linear-gradient(160deg, #1c1b2e 0%, #0a0a0a 100%);
+        }
+        .profile-about-compact .profile-about-fallback.hidden {
+            display: none;
+        }
+        #experience .experience-timeline {
+            padding-left: 2rem;
+        }
+        @media (min-width: 768px) {
+            #experience .experience-timeline {
+                padding-left: 3rem;
+            }
+        }
+        #experience .experience-timeline .timeline-dot {
+            left: -2.05rem;
+        }
+        @media (min-width: 768px) {
+            #experience .experience-timeline .timeline-dot {
+                left: -3.05rem;
+            }
+        }
+
+        .section-y { margin-bottom: 4rem; }
+        @media (min-width: 768px) {
+            .section-y { margin-bottom: 7.5rem; }
+        }
+        .section-pad-x {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        @media (min-width: 768px) {
+            .section-pad-x {
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+        }
+
+        #site-nav .nav-bar {
+            min-height: 5rem;
+        }
+        .nav-mobile-panel {
+            display: none;
+            flex-direction: column;
+            gap: 0.25rem;
+            padding: 0.75rem 1rem 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(5, 5, 5, 0.97);
+            backdrop-filter: blur(16px);
+        }
+        .nav-mobile-panel.open {
+            display: flex;
+        }
+        .nav-mobile-panel a {
+            display: block;
+            padding: 0.75rem 0.5rem;
+            font-size: 1rem;
+            color: #c7c4d7;
+        }
+        .nav-mobile-panel a:hover {
+            color: #c0c1ff;
+        }
+
+        @media (max-width: 767px) {
+            .site-logo__text {
+                font-size: 1.125rem;
+            }
+            .site-logo__mark {
+                font-size: 0.6875rem;
+                padding: 0.35rem 0.4rem;
+            }
+            .stat-value {
+                font-size: 1.75rem !important;
+                line-height: 1.2 !important;
+            }
+            .stat-label {
+                font-size: 0.625rem !important;
+                letter-spacing: 0.06em !important;
+            }
+            .profile-about-compact {
+                max-width: min(100%, 18rem);
+                width: 100%;
+            }
+            .project-slider-btn {
+                width: 2rem;
+                height: 2rem;
+            }
+            .project-slider-btn--prev { left: 0.35rem; }
+            .project-slider-btn--next { right: 0.35rem; }
+            .project-slider-viewport {
+                min-height: 220px;
+                max-height: min(85vw, 480px);
+                aspect-ratio: 3 / 4;
+            }
+            .project-slider-footer {
+                flex-wrap: wrap;
+            }
+            .project-slider-preview {
+                flex: 0 0 3.75rem;
+                width: 3.75rem;
+                height: 2.5rem;
+            }
+            #workflow .workflow-inner {
+                padding: 1.5rem 1rem;
+                border-radius: 1.5rem;
+            }
+            .animate-float {
+                animation: none;
+            }
+        }
+
+        #workflow .workflow-intro {
+            font-size: 1.0625rem;
+            line-height: 1.7;
+        }
+        @media (min-width: 768px) {
+            #workflow .workflow-intro {
+                font-size: 1.25rem;
+            }
+        }
+        #workflow .workflow-step-card {
+            max-width: 22rem;
+        }
+        @media (min-width: 768px) {
+            #workflow .workflow-step-card {
+                max-width: 20rem;
+            }
+        }
+        #workflow .workflow-step-label {
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+        @media (min-width: 768px) {
+            #workflow .workflow-step-label {
+                font-size: 0.875rem;
+            }
+        }
+        #workflow .workflow-step-title {
+            font-size: 1.375rem;
+            line-height: 1.3;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #e5e2e1;
+        }
+        @media (min-width: 768px) {
+            #workflow .workflow-step-title {
+                font-size: 1.5rem;
+            }
+        }
+        #workflow .workflow-step-body {
+            font-size: 1rem;
+            line-height: 1.65;
+            color: #c7c4d7;
+        }
+        @media (min-width: 768px) {
+            #workflow .workflow-step-body {
+                font-size: 1.0625rem;
+                line-height: 1.7;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .site-logo__given,
+            .site-logo__family {
+                display: none;
+            }
+            .site-logo {
+                gap: 0;
+            }
+        }
+
+        section[id],
+        main > section {
+            scroll-margin-top: 5.5rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.75rem;
+        }
+        .contact-details a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            color: #e5e2e1;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            word-break: break-word;
+            text-align: center;
+        }
+        @media (hover: hover) {
+            .contact-details a:hover {
+                color: #4cd7f6;
+            }
+        }
+        .contact-details .material-symbols-outlined {
+            font-size: 1.25rem;
+            color: #4cd7f6;
+            flex-shrink: 0;
+        }
+
+        .back-to-top {
+            position: fixed;
+            right: 1rem;
+            bottom: 1rem;
+            z-index: 60;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(192, 193, 255, 0.4);
+            background: rgba(10, 10, 15, 0.9);
+            color: #c0c1ff;
+            box-shadow: 0 0 20px rgba(192, 193, 255, 0.2);
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease, background 0.2s ease, border-color 0.2s ease;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        @media (hover: hover) {
+            .back-to-top:hover {
+                background: rgba(73, 75, 214, 0.85);
+                border-color: #c0c1ff;
+                color: #e1e0ff;
+            }
+        }
+        .back-to-top:focus-visible {
+            outline: 2px solid #c0c1ff;
+            outline-offset: 3px;
+        }
+        @media (min-width: 768px) {
+            .back-to-top {
+                right: 1.5rem;
+                bottom: 1.5rem;
+                width: 3.25rem;
+                height: 3.25rem;
+            }
+        }
+
+    </style>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<canvas class="neural-bg" id="neuralCanvas"></canvas>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-xl border-b border-white/10" id="site-nav">
+<div class="max-w-container-max mx-auto section-pad-x">
+<div class="nav-bar flex justify-between items-center gap-3">
+<a class="site-logo shrink-0 min-w-0" href="#top" aria-label="Naveen Singh — back to top"><span class="site-logo__mark">NS</span><span class="site-logo__text"><span class="site-logo__given">Naveen</span> <span class="site-logo__family">Singh</span></span></a>
+<div class="hidden md:flex items-center gap-stack-lg flex-1 justify-center">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" href="#projects">Projects</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#experience">Experience</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#workflow">Approach</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#stack">Stack</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<a class="bg-primary text-on-primary px-4 sm:px-stack-lg py-2 font-label-md rounded-full glow-button active:scale-95 text-label-sm sm:text-base whitespace-nowrap inline-flex items-center gap-1.5" href="Naveen-Singh-CV.pdf" download="Naveen-Singh-CV.pdf">
+<span class="material-symbols-outlined text-lg hidden sm:inline" aria-hidden="true">download</span>
+Download CV
+</a>
+<button type="button" class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg border border-outline-variant/40 text-primary" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Open menu">
+<span class="material-symbols-outlined text-2xl" id="nav-toggle-icon">menu</span>
+</button>
+</div>
+</div>
+<div class="nav-mobile-panel md:hidden" id="nav-mobile">
+<a href="#projects">Projects</a>
+<a href="#experience">Experience</a>
+<a href="#workflow">Approach</a>
+<a href="#stack">Stack</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+<main class="pt-[5.5rem]">
+<!-- Hero Section -->
+<section class="min-h-[85vh] flex flex-col justify-center items-center text-center section-pad-x pb-24 pt-6 relative" id="top">
+<div class="profile-photo-wrap">
+<img alt="Naveen Singh — Full Stack Developer" class="profile-photo" decoding="async" height="136" loading="eager" src="images/profile/naveensingh.png" width="136" onerror="this.classList.add('hidden'); this.nextElementSibling?.classList.remove('hidden');"/>
+<div aria-hidden="true" class="profile-photo-fallback hidden">NS</div>
+</div>
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-variant/50 border border-outline-variant/30 text-secondary mb-stack-lg animate-pulse">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-label-sm uppercase tracking-widest text-center text-[10px] sm:text-label-sm">Open to full-time opportunities</span>
+</div>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg max-w-4xl mb-stack-md text-balance px-1">
+                Architecting <span class="text-primary">Scalable</span> Full-Stack Systems
+            </h1>
+<p class="font-body-md sm:font-body-lg text-on-surface-variant max-w-2xl mb-stack-lg min-h-[1.6em] px-1">
+                Senior Web Developer — <span class="text-secondary font-semibold" id="typing-text"></span>
+</p>
+<div class="flex flex-col sm:flex-row gap-stack-md w-full max-w-md sm:max-w-none sm:w-auto px-2 sm:px-0">
+<a class="bg-primary text-on-primary px-8 py-4 font-label-md rounded-full glow-button text-center transition-all duration-300 w-full sm:w-auto" href="#projects">View Projects</a>
+<a class="border border-outline-variant hover:border-primary px-8 py-4 font-label-md rounded-full text-center backdrop-blur-sm transition-all duration-300 w-full sm:w-auto" href="https://www.linkedin.com/in/developernaveen7/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+</div>
+<div class="absolute bottom-6 sm:bottom-10 animate-bounce hidden sm:block">
+<span class="material-symbols-outlined text-outline">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Stats Grid -->
+<section class="max-w-container-max mx-auto section-pad-x section-y reveal">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-gutter">
+<div class="glass-card p-3 sm:p-stack-lg flex flex-col items-center text-center rounded-xl">
+<span class="font-display-lg text-headline-lg text-primary stat-value">6+</span>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest stat-label">Years Experience</span>
+</div>
+<div class="glass-card p-3 sm:p-stack-lg flex flex-col items-center text-center rounded-xl">
+<span class="font-display-lg text-headline-lg text-secondary stat-value">35+</span>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest stat-label">Projects Delivered</span>
+</div>
+<div class="glass-card p-3 sm:p-stack-lg flex flex-col items-center text-center rounded-xl">
+<span class="font-display-lg text-headline-lg text-tertiary stat-value">Lead</span>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest stat-label">Team Leadership</span>
+</div>
+<div class="glass-card p-3 sm:p-stack-lg flex flex-col items-center text-center rounded-xl">
+<span class="font-display-lg text-headline-lg text-on-surface stat-value">100%</span>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest stat-label">Scalable Mindset</span>
+</div>
+</div>
+</section>
+<!-- Currently Building Banner -->
+<section class="max-w-container-max mx-auto section-pad-x section-y reveal">
+<div class="glass-card rounded-2xl p-4 sm:p-stack-md flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-primary/20 bg-primary/5 overflow-hidden relative group animate-pulse-glow">
+<div class="flex items-start sm:items-center gap-stack-md z-10 min-w-0">
+<div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center text-primary group-hover:rotate-12 transition-transform">
+<span class="material-symbols-outlined">memory</span>
+</div>
+<div>
+<h3 class="font-headline-md text-body-lg text-on-surface text-balance">Open to full-time &amp; senior full-stack roles</h3>
+<p class="font-label-sm text-on-surface-variant text-pretty">6+ years shipping production systems—microservices, cloud on AWS, and team leadership. Based in India, open to remote and hybrid opportunities.</p>
+</div>
+</div>
+<div class="flex items-center gap-stack-md mt-stack-md md:mt-0 z-10">
+<a class="bg-surface-variant hover:bg-surface-bright text-on-surface px-6 py-2 rounded-lg transition-all active:scale-95 inline-flex items-center gap-2 font-label-md" href="https://www.linkedin.com/in/developernaveen7/" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-lg text-secondary">link</span>
+LinkedIn
+</a>
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+</div>
+</section>
+<!-- About & Experience -->
+<section class="max-w-container-max mx-auto section-pad-x section-y reveal" id="experience">
+<div class="about-intro-grid grid grid-cols-1 lg:grid-cols-[13rem_1fr] gap-8 lg:gap-14 mb-12 lg:mb-24">
+<div class="profile-about-compact">
+<img alt="Naveen Singh" class="profile-about-img" decoding="async" loading="lazy" src="images/profile/naveensingh.png" onerror="this.classList.add('hidden'); this.nextElementSibling?.classList.remove('hidden');"/>
+<div aria-hidden="true" class="profile-about-fallback hidden">NS</div>
+</div>
+<div class="min-w-0 text-center lg:text-left">
+<span class="font-label-sm text-secondary uppercase tracking-[0.2em] mb-stack-md block">About</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-stack-lg">Full-stack engineering with a technical architect mindset.</h2>
+<p class="font-body-lg text-on-surface-variant mb-stack-lg">
+                    Full-stack developer with 6+ years building scalable web applications and APIs using React.js, Node.js, and modern JavaScript frameworks. I ship production-ready MERN applications, integrate third-party APIs, and architect modular, high-performance systems—with a strong focus on clean architecture, performance, and maintainability. Currently open to full-time and senior full-stack opportunities.
+                </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter text-left">
+<div class="p-stack-md border-l-2 border-primary/30 hover:border-primary transition-colors">
+<h4 class="font-label-md text-on-surface mb-1">Education</h4>
+<p class="text-label-sm text-on-surface-variant leading-relaxed">B.Sc. Information Technology · Ludhiana College of Engineering &amp; Technology (2016–2019)</p>
+</div>
+<div class="p-stack-md border-l-2 border-secondary/30 hover:border-secondary transition-colors">
+<h4 class="font-label-md text-on-surface mb-1">Focus</h4>
+<p class="text-label-sm text-on-surface-variant leading-relaxed">Microservices, real-time systems, admin dashboards, cloud deployments, and Agile delivery.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/25 pt-16 lg:pt-20">
+<span class="font-label-sm text-primary uppercase tracking-[0.2em] mb-stack-md block">Experience</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-stack-lg">Work history</h2>
+<div class="relative timeline-line experience-timeline max-w-3xl">
+<div class="space-y-14">
+<!-- Exp 1 — per CV -->
+<div class="relative group">
+<div class="timeline-dot absolute top-1 w-3 h-3 rounded-full border-2 border-primary bg-surface shadow-[0_0_10px_#c0c1ff] group-hover:scale-125 transition-transform"></div>
+<span class="font-label-sm text-primary mb-2 block">Feb 2020 — Present</span>
+<h3 class="font-headline-md text-body-lg text-on-surface mb-1">Full Stack Developer &amp; Team Lead</h3>
+<p class="font-label-md text-on-surface-variant mb-stack-md">01 Synergy Co. · Ludhiana, India</p>
+<p class="font-body-md text-on-surface-variant mb-stack-md">Over 6 years at 01 Synergy, I have worked on AI-powered platforms, logistics and customs automation (<strong class="text-on-surface">KlearNow.AI</strong>), SaaS applications, e-commerce, real-time video and messaging, browser extensions, PDF/document processing, aggregation platforms, and subscription-based products.</p>
+<p class="font-body-md text-on-surface-variant mb-stack-md">I build scalable frontend applications, backend microservices, REST APIs, queue-based processing (Redis, BullMQ, RabbitMQ), admin dashboards, and cloud-deployed architectures on AWS (EC2, ECS, Lambda, S3, SQS/SNS).</p>
+<p class="font-body-md text-on-surface-variant">Experienced with third-party integrations, payment gateways, authentication systems, real-time collaboration, and performance optimization for high-scale production applications—working in distributed Agile teams with Git, CI/CD, and Jira.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Grid -->
+<section class="bg-surface-container py-16 md:py-section-gap section-y reveal" id="stack">
+<div class="max-w-container-max mx-auto section-pad-x">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-stack-md">Skills</h2>
+<p class="font-body-lg text-on-surface-variant">Core stack from my CV—frontend, backend, data, cloud, and delivery.</p>
+</div>
+<div class="grid sm:grid-cols-2 gap-gutter items-stretch">
+<!-- Frontend -->
+<div class="skill-card glass-card p-stack-lg rounded-xl flex flex-col h-full">
+<div class="text-primary mb-stack-md"><span class="material-symbols-outlined text-4xl">code</span></div>
+<h3 class="font-label-md text-on-surface mb-stack-md uppercase tracking-widest">Frontend</h3>
+<div class="skill-badges flex flex-wrap gap-2 content-start">
+<span class="skill-badge bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded text-label-sm">HTML, CSS &amp; JavaScript</span>
+<span class="skill-badge bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded text-label-sm">React.js</span>
+<span class="skill-badge bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded text-label-sm">Next.js</span>
+<span class="skill-badge bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded text-label-sm">Redux &amp; Redux Toolkit</span>
+<span class="skill-badge bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded text-label-sm">TypeScript</span>
+</div>
+</div>
+<!-- Backend -->
+<div class="skill-card glass-card p-stack-lg rounded-xl flex flex-col h-full">
+<div class="text-secondary mb-stack-md"><span class="material-symbols-outlined text-4xl">layers</span></div>
+<h3 class="font-label-md text-on-surface mb-stack-md uppercase tracking-widest">Backend</h3>
+<div class="skill-badges flex flex-wrap gap-2 content-start">
+<span class="skill-badge bg-secondary/10 text-secondary border border-secondary/20 px-3 py-1 rounded text-label-sm">Node.js</span>
+<span class="skill-badge bg-secondary/10 text-secondary border border-secondary/20 px-3 py-1 rounded text-label-sm">Express.js</span>
+<span class="skill-badge bg-secondary/10 text-secondary border border-secondary/20 px-3 py-1 rounded text-label-sm">Microservices</span>
+<span class="skill-badge bg-secondary/10 text-secondary border border-secondary/20 px-3 py-1 rounded text-label-sm">WebSockets</span>
+</div>
+</div>
+<!-- Data & Queues -->
+<div class="skill-card glass-card p-stack-lg rounded-xl flex flex-col h-full">
+<div class="text-on-surface mb-stack-md"><span class="material-symbols-outlined text-4xl">database</span></div>
+<h3 class="font-label-md text-on-surface mb-stack-md uppercase tracking-widest">Data &amp; Queues</h3>
+<div class="skill-badges flex flex-wrap gap-2 content-start">
+<span class="skill-badge bg-on-surface/10 text-on-surface border border-on-surface/20 px-3 py-1 rounded text-label-sm">MySQL</span>
+<span class="skill-badge bg-on-surface/10 text-on-surface border border-on-surface/20 px-3 py-1 rounded text-label-sm">PostgreSQL</span>
+<span class="skill-badge bg-on-surface/10 text-on-surface border border-on-surface/20 px-3 py-1 rounded text-label-sm">MongoDB</span>
+<span class="skill-badge bg-on-surface/10 text-on-surface border border-on-surface/20 px-3 py-1 rounded text-label-sm">Redis</span>
+<span class="skill-badge bg-on-surface/10 text-on-surface border border-on-surface/20 px-3 py-1 rounded text-label-sm">BullMQ</span>
+<span class="skill-badge bg-on-surface/10 text-on-surface border border-on-surface/20 px-3 py-1 rounded text-label-sm">RabbitMQ</span>
+</div>
+</div>
+<!-- Cloud & DevOps -->
+<div class="skill-card glass-card p-stack-lg rounded-xl flex flex-col h-full">
+<div class="text-on-surface mb-stack-md"><span class="material-symbols-outlined text-4xl">cloud</span></div>
+<h3 class="font-label-md text-on-surface mb-stack-md uppercase tracking-widest">Cloud &amp; DevOps</h3>
+<div class="skill-badges flex flex-wrap gap-2 content-start">
+<span class="skill-badge bg-on-surface/10 text-on-surface border border-on-surface/20 px-3 py-1 rounded text-label-sm">Docker</span>
+<span class="skill-badge bg-on-surface/10 text-on-surface border border-on-surface/20 px-3 py-1 rounded text-label-sm">VPS Hosting</span>
+<span class="skill-badge bg-on-surface/10 text-on-surface border border-on-surface/20 px-3 py-1 rounded text-label-sm">AWS Lambda</span>
+<span class="skill-badge bg-on-surface/10 text-on-surface border border-on-surface/20 px-3 py-1 rounded text-label-sm">SQS &amp; SNS</span>
+<span class="skill-badge bg-on-surface/10 text-on-surface border border-on-surface/20 px-3 py-1 rounded text-label-sm">S3</span>
+<span class="skill-badge bg-on-surface/10 text-on-surface border border-on-surface/20 px-3 py-1 rounded text-label-sm">EC2 &amp; ECS</span>
+<span class="skill-badge bg-on-surface/10 text-on-surface border border-on-surface/20 px-3 py-1 rounded text-label-sm">CI/CD</span>
+</div>
+</div>
+<!-- Tools -->
+<div class="skill-card glass-card p-stack-lg rounded-xl border-primary/20 sm:col-span-2 max-w-2xl mx-auto w-full flex flex-col">
+<div class="text-primary mb-stack-md"><span class="material-symbols-outlined text-4xl">groups</span></div>
+<h3 class="font-label-md text-on-surface mb-stack-md uppercase tracking-widest">Tools &amp; Process</h3>
+<div class="skill-badges flex flex-wrap gap-2 content-start justify-center sm:justify-start">
+<span class="skill-badge bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded text-label-sm">Git &amp; GitHub</span>
+<span class="skill-badge bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded text-label-sm">Jira</span>
+<span class="skill-badge bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded text-label-sm">Agile Methodology</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="max-w-container-max mx-auto section-pad-x section-y" id="projects">
+<div class="mb-16">
+<span class="font-label-sm text-primary uppercase tracking-[0.2em] mb-stack-md block">Portfolio</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Selected production work</h2>
+<p class="font-body-lg text-on-surface-variant mt-stack-md max-w-3xl">High-impact products I&apos;ve helped build—microservices, dashboards, marketplaces, and selective Gen AI features (Coach AI, PDF AI).</p>
+</div>
+<div class="space-y-gutter" id="projects-list">
+<!-- PaintNite -->
+<article class="glass-card rounded-2xl overflow-hidden" id="paintnite-project">
+<div class="project-card-grid grid lg:grid-cols-2 gap-4 lg:gap-0">
+<div class="p-4 sm:p-stack-lg lg:p-12 flex flex-col justify-center order-2 lg:order-1 min-w-0">
+<h3 class="font-headline-md md:text-headline-lg text-on-surface mb-stack-md">PaintNite</h3>
+<p class="font-label-md text-primary mb-stack-sm">Full Stack Engineer · React, Node.js, AWS, Microservices</p>
+<p class="font-body-md text-on-surface-variant mb-stack-md">A large-scale social entertainment platform across North America—30+ interconnected apps for events, bookings, payments, and analytics. Built and maintained distributed architecture for real-time user interactions at regional scale.</p>
+<ul class="font-body-md text-on-surface-variant space-y-2 mb-stack-lg list-disc pl-5">
+<li>Customer-facing web, mobile, and internal dashboards</li>
+<li>Real-time bookings, payments, and multi-region analytics</li>
+<li>Microservices on AWS with DevOps pipelines</li>
+</ul>
+<div class="flex gap-2 flex-wrap mb-stack-lg">
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">React</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">Node.js</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">AWS</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">Microservices</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-tertiary/30 rounded text-tertiary bg-tertiary/5">Full-Stack</span>
+</div>
+   
+</div>
+<div class="project-slider-col order-1 lg:order-2 p-4 sm:p-stack-md lg:p-stack-lg">
+<div class="project-slider" data-project-slider data-slider-label="PaintNite screenshots">
+<div class="project-slider-viewport" tabindex="0" aria-roledescription="carousel" aria-label="PaintNite screenshots">
+<div class="project-slider-track">
+<div class="project-slider-slide"><img alt="PaintNite platform showcase" loading="eager" src="images/projects/paintnite/hero.jpg"/></div>
+<div class="project-slider-slide"><img alt="PaintNite landing page" loading="lazy" src="images/projects/paintnite/landing.jpg"/></div>
+<div class="project-slider-slide"><img alt="PaintNite mobile experience" loading="lazy" src="images/projects/paintnite/mobile.jpg"/></div>
+<div class="project-slider-slide"><img alt="PaintNite platform collage" loading="lazy" src="images/projects/paintnite/collage.jpg"/></div>
+</div>
+<button type="button" class="project-slider-btn project-slider-btn--prev" data-slider-prev aria-label="Previous screenshot"><span class="material-symbols-outlined text-xl">chevron_left</span></button>
+<button type="button" class="project-slider-btn project-slider-btn--next" data-slider-next aria-label="Next screenshot"><span class="material-symbols-outlined text-xl">chevron_right</span></button>
+</div>
+<div class="project-slider-footer">
+<div class="project-slider-previews" data-slider-previews></div>
+<span class="project-slider-counter" data-slider-counter>1 / 4</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- JoinPeel -->
+<article class="glass-card rounded-2xl overflow-hidden" id="joinpeel-project">
+<div class="project-card-grid grid lg:grid-cols-2 gap-4 lg:gap-0">
+<div class="p-4 sm:p-stack-lg lg:p-12 flex flex-col justify-center order-2 lg:order-1 min-w-0 lg:max-h-none lg:overflow-visible">
+<span class="font-label-sm text-tertiary uppercase tracking-widest mb-stack-md"></span>
+<h3 class="font-headline-md md:text-headline-lg text-on-surface mb-stack-sm">JoinPeel (PEEL)</h3>
+<p class="font-label-md text-primary mb-stack-lg">Full Stack Developer · React, Next.js, Supabase, TailwindCSS</p>
+<div class="space-y-stack-lg mb-stack-lg">
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Project Overview</h4>
+<p class="font-body-md text-on-surface-variant">JoinPeel is a farm-to-consumer marketplace connecting local farmers with eco-conscious buyers for transparent and direct product sales. It offers geo-based product discovery, fast checkout via Stripe, real-time chat, order tracking, and customizable seller profiles.</p>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Platform Features</h4>
+<ul class="font-body-md text-on-surface-variant space-y-2 list-disc pl-5">
+<li>Role switching—users can act as buyer or seller from one account</li>
+<li>Favorites, product requests, and in-platform messaging</li>
+<li>Admin dashboard for users, listings, payments, and analytics</li>
+<li>Promotes sustainable, community-driven commerce across the USA</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Key Technologies</h4>
+<div class="flex gap-2 flex-wrap">
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">React</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">Next.js</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">Node.js</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">Supabase</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">Stripe</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">TailwindCSS</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-tertiary/30 rounded text-tertiary bg-tertiary/5">JavaScript</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-tertiary/30 rounded text-tertiary bg-tertiary/5">HTML5</span>
+</div>
+</div>
+</div>
+
+</div>
+<div class="project-slider-col order-1 lg:order-2 p-4 sm:p-stack-md lg:p-stack-lg">
+<div class="project-slider" data-project-slider data-slider-label="JoinPeel screenshots">
+<div class="project-slider-viewport" tabindex="0" aria-roledescription="carousel" aria-label="JoinPeel screenshots">
+<div class="project-slider-track">
+<div class="project-slider-slide"><img alt="JoinPeel marketplace hero" loading="eager" src="images/projects/joinpeel/hero.jpg"/></div>
+<div class="project-slider-slide"><img alt="JoinPeel goal and solution" loading="lazy" src="images/projects/joinpeel/goal-solution.jpg"/></div>
+<div class="project-slider-slide"><img alt="JoinPeel user roles" loading="lazy" src="images/projects/joinpeel/user-roles.jpg"/></div>
+<div class="project-slider-slide"><img alt="JoinPeel platform pages" loading="lazy" src="images/projects/joinpeel/pages.jpg"/></div>
+<div class="project-slider-slide"><img alt="JoinPeel personalization" loading="lazy" src="images/projects/joinpeel/personalization.jpg"/></div>
+</div>
+<button type="button" class="project-slider-btn project-slider-btn--prev" data-slider-prev aria-label="Previous screenshot"><span class="material-symbols-outlined text-xl">chevron_left</span></button>
+<button type="button" class="project-slider-btn project-slider-btn--next" data-slider-next aria-label="Next screenshot"><span class="material-symbols-outlined text-xl">chevron_right</span></button>
+</div>
+<div class="project-slider-footer">
+<div class="project-slider-previews" data-slider-previews></div>
+<span class="project-slider-counter" data-slider-counter>1 / 5</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- HRMaster -->
+<article class="glass-card rounded-2xl overflow-hidden" id="hrmaster-project">
+<div class="project-card-grid grid lg:grid-cols-2 gap-4 lg:gap-0">
+<div class="p-4 sm:p-stack-lg lg:p-12 flex flex-col justify-center order-2 lg:order-1 min-w-0 lg:max-h-none lg:overflow-visible">
+<span class="font-label-sm text-secondary uppercase tracking-widest mb-stack-md"></span>
+<h3 class="font-headline-md md:text-headline-lg text-on-surface mb-stack-sm">HRMaster</h3>
+<p class="font-label-md text-primary mb-stack-lg">Lead Full Stack Developer · React, PostgreSQL, OAuth, API</p>
+<div class="space-y-stack-lg mb-stack-lg">
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Project Overview</h4>
+<p class="font-body-md text-on-surface-variant">Enterprise-grade SaaS HR platform covering recruitment through retirement—streamlining hiring, employee lifecycle, payroll, leave, performance, and analytics for modern B2B teams. Built on AWS with a React frontend and modular microservices backend.</p>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Core Modules</h4>
+<ul class="font-body-md text-on-surface-variant space-y-2 list-disc pl-5">
+<li>Real-time dashboard with workforce KPIs and activity feeds</li>
+<li>Employee directory, recruitment hub, and leave workflows</li>
+<li>Payroll processing, performance reviews, and time tracking</li>
+<li>Reports &amp; analytics with export; event-driven notifications</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Key Technologies</h4>
+<div class="flex gap-2 flex-wrap">
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">React</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">Redux</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">Node.js</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">PostgreSQL</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">OAuth</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">AWS</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">GraphQL</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-tertiary/30 rounded text-tertiary bg-tertiary/5">WebSockets</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-tertiary/30 rounded text-tertiary bg-tertiary/5">Slack</span>
+</div>
+</div>
+</div>
+
+</div>
+<div class="project-slider-col order-1 lg:order-2 p-4 sm:p-stack-md lg:p-stack-lg">
+<div class="project-slider" data-project-slider data-slider-label="HRMaster screenshots">
+<div class="project-slider-viewport" tabindex="0" aria-roledescription="carousel" aria-label="HRMaster screenshots">
+<div class="project-slider-track">
+<div class="project-slider-slide"><img alt="HRMaster landing page" loading="eager" src="images/projects/hrmaster/hero.jpg"/></div>
+<div class="project-slider-slide"><img alt="HRMaster features" loading="lazy" src="images/projects/hrmaster/features.jpg"/></div>
+<div class="project-slider-slide"><img alt="HRMaster dashboard" loading="lazy" src="images/projects/hrmaster/dashboard.jpg"/></div>
+<div class="project-slider-slide"><img alt="HRMaster employees" loading="lazy" src="images/projects/hrmaster/employees.jpg"/></div>
+<div class="project-slider-slide"><img alt="HRMaster leave management" loading="lazy" src="images/projects/hrmaster/leave.jpg"/></div>
+<div class="project-slider-slide"><img alt="HRMaster payroll" loading="lazy" src="images/projects/hrmaster/payroll.jpg"/></div>
+<div class="project-slider-slide"><img alt="HRMaster performance" loading="lazy" src="images/projects/hrmaster/performance.jpg"/></div>
+<div class="project-slider-slide"><img alt="HRMaster time tracking" loading="lazy" src="images/projects/hrmaster/time-tracking.jpg"/></div>
+<div class="project-slider-slide"><img alt="HRMaster reports" loading="lazy" src="images/projects/hrmaster/reports.jpg"/></div>
+</div>
+<button type="button" class="project-slider-btn project-slider-btn--prev" data-slider-prev aria-label="Previous screenshot">
+<span class="material-symbols-outlined text-xl">chevron_left</span>
+</button>
+<button type="button" class="project-slider-btn project-slider-btn--next" data-slider-next aria-label="Next screenshot">
+<span class="material-symbols-outlined text-xl">chevron_right</span>
+</button>
+</div>
+<div class="project-slider-footer">
+<div class="project-slider-previews" data-slider-previews></div>
+<span class="project-slider-counter" data-slider-counter>1 / 9</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Hive -->
+<article class="glass-card rounded-2xl overflow-hidden" id="hive-project">
+<div class="project-card-grid grid lg:grid-cols-2 gap-4 lg:gap-0">
+<div class="p-4 sm:p-stack-lg lg:p-12 flex flex-col justify-center order-2 lg:order-1 min-w-0 lg:max-h-none lg:overflow-visible">
+<span class="font-label-sm text-tertiary uppercase tracking-widest mb-stack-md"></span>
+<h3 class="font-headline-md md:text-headline-lg text-on-surface mb-stack-sm">Hive</h3>
+<p class="font-label-md text-primary mb-stack-sm">Full-Stack Developer · React, SaaS</p>
+<p class="font-label-sm text-on-surface-variant mb-stack-lg">SaaS project management solution · $23M raised</p>
+<div class="space-y-stack-lg mb-stack-lg">
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Project Overview</h4>
+<p class="font-body-md text-on-surface-variant">Hive is a cutting-edge productivity platform built from the ground up to solve prioritization, communication bottlenecks, and inefficient workflows. It replaces scattered browser tabs with a sleek, integrated workspace—Kanban boards, Gantt timelines, and team actions in one place.</p>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Impact</h4>
+<ul class="font-body-md text-on-surface-variant space-y-2 list-disc pl-5">
+<li>Enterprise-grade SaaS for seamless teamwork at scale</li>
+<li>Content calendar, project timelines, and real-time collaboration</li>
+<li>Part of a full-stack team delivering product from concept to production</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Key Technologies</h4>
+<div class="flex gap-2 flex-wrap">
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">React</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">Full-Stack</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">SaaS</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">Product Development</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">Web Development</span>
+</div>
+</div>
+</div>
+
+</div>
+<div class="project-slider-col order-1 lg:order-2 p-4 sm:p-stack-md lg:p-stack-lg">
+<div class="project-slider" data-project-slider data-slider-label="Hive screenshots">
+<div class="project-slider-viewport" tabindex="0" aria-roledescription="carousel" aria-label="Hive screenshots">
+<div class="project-slider-track">
+<div class="project-slider-slide"><img alt="Hive SaaS — content calendar Kanban board" loading="eager" src="images/projects/hive/hero.jpg"/></div>
+<div class="project-slider-slide"><img alt="Hive Gantt timeline and project planning" loading="lazy" src="images/projects/hive/gantt.jpg"/></div>
+</div>
+<button type="button" class="project-slider-btn project-slider-btn--prev" data-slider-prev aria-label="Previous screenshot"><span class="material-symbols-outlined text-xl">chevron_left</span></button>
+<button type="button" class="project-slider-btn project-slider-btn--next" data-slider-next aria-label="Next screenshot"><span class="material-symbols-outlined text-xl">chevron_right</span></button>
+</div>
+<div class="project-slider-footer">
+<div class="project-slider-previews" data-slider-previews></div>
+<span class="project-slider-counter" data-slider-counter>1 / 2</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- PatronPal -->
+<article class="glass-card rounded-2xl overflow-hidden" id="patronpal-project">
+<div class="project-card-grid grid lg:grid-cols-2 gap-4 lg:gap-0">
+<div class="p-4 sm:p-stack-lg lg:p-12 flex flex-col justify-center order-2 lg:order-1 min-w-0 lg:max-h-none lg:overflow-visible">
+<span class="font-label-sm text-secondary uppercase tracking-widest mb-stack-md"></span>
+<h3 class="font-headline-md md:text-headline-lg text-on-surface mb-stack-sm">PatronPal</h3>
+<p class="font-label-md text-primary mb-stack-sm">Full Stack Developer · MERN Stack</p>
+<p class="font-label-sm text-on-surface-variant mb-stack-lg">Online restaurant ordering platform</p>
+<div class="space-y-stack-lg mb-stack-lg">
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Project Overview</h4>
+<p class="font-body-md text-on-surface-variant">PatronPal streamlines restaurant operations end to end—menus, real-time orders, and secure payments in one platform. Owners update offerings, track fulfillment live, and manage checkout with integrated Stripe, improving efficiency and the customer dining experience.</p>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Platform Features</h4>
+<ul class="font-body-md text-on-surface-variant space-y-2 list-disc pl-5">
+<li>Delivery and pickup ordering with location-based discovery</li>
+<li>Category browsing, filters, offers, and restaurant listings</li>
+<li>Business onboarding for restaurants and multi-region coverage</li>
+<li>Secure payments and intuitive back-office management</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Key Technologies</h4>
+<div class="flex gap-2 flex-wrap">
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">React</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">Node.js</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">MERN</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">MEAN</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">Stripe</span>
+</div>
+</div>
+</div>
+
+</div>
+<div class="project-slider-col order-1 lg:order-2 p-4 sm:p-stack-md lg:p-stack-lg">
+<div class="project-slider" data-project-slider data-slider-label="PatronPal screenshots">
+<div class="project-slider-viewport" tabindex="0" aria-roledescription="carousel" aria-label="PatronPal screenshots">
+<div class="project-slider-track">
+<div class="project-slider-slide"><img alt="PatronPal ordering platform — browse, search, and checkout" loading="eager" src="images/projects/patronpal/platform.jpg"/></div>
+<div class="project-slider-slide"><img alt="PatronPal landing page — delivery and restaurant listings" loading="lazy" src="images/projects/patronpal/landing.jpg"/></div>
+</div>
+<button type="button" class="project-slider-btn project-slider-btn--prev" data-slider-prev aria-label="Previous screenshot"><span class="material-symbols-outlined text-xl">chevron_left</span></button>
+<button type="button" class="project-slider-btn project-slider-btn--next" data-slider-next aria-label="Next screenshot"><span class="material-symbols-outlined text-xl">chevron_right</span></button>
+</div>
+<div class="project-slider-footer">
+<div class="project-slider-previews" data-slider-previews></div>
+<span class="project-slider-counter" data-slider-counter>1 / 2</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- PDF AI -->
+<article class="glass-card rounded-2xl overflow-hidden" id="pdf-ai-project">
+<div class="project-card-grid grid lg:grid-cols-2 gap-4 lg:gap-0">
+<div class="p-4 sm:p-stack-lg lg:p-12 flex flex-col justify-center order-2 lg:order-1 min-w-0 lg:max-h-none lg:overflow-visible">
+<span class="font-label-sm text-primary uppercase tracking-widest mb-stack-md"></span>
+<h3 class="font-headline-md md:text-headline-lg text-on-surface mb-stack-sm">PDF AI</h3>
+<p class="font-label-md text-primary mb-stack-sm">Chrome Extension Developer · React, Tailwind CSS</p>
+<p class="font-label-sm text-on-surface-variant mb-stack-lg">Chat with your PDF online platform</p>
+<div class="space-y-stack-lg mb-stack-lg">
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Project Overview</h4>
+<p class="font-body-md text-on-surface-variant">Upload a PDF and chat with it—get concise summaries, ask questions, and find answers without reading every page. Built as a Chrome extension with subscription management, powered by React, Tailwind CSS, and shadcn/ui.</p>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Key Features</h4>
+<ul class="font-body-md text-on-surface-variant space-y-2 list-disc pl-5">
+<li>Split-view PDF reader with AI chat and page citations</li>
+<li>Instant summaries and Q&amp;A on long documents</li>
+<li>Stripe-backed subscriptions and free-tier onboarding</li>
+<li>Chrome extension for in-browser PDF interaction</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Key Technologies</h4>
+<div class="flex gap-2 flex-wrap">
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">React</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">Next.js</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">Tailwind CSS</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">Chrome Extension</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">Stripe</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-tertiary/30 rounded text-tertiary bg-tertiary/5">Plugin Development</span>
+</div>
+</div>
+</div>
+
+</div>
+<div class="project-slider-col order-1 lg:order-2 p-4 sm:p-stack-md lg:p-stack-lg">
+<div class="project-slider" data-project-slider data-slider-label="PDF AI screenshots">
+<div class="project-slider-viewport" tabindex="0" aria-roledescription="carousel" aria-label="PDF AI screenshots">
+<div class="project-slider-track">
+<div class="project-slider-slide"><img alt="PDF AI landing page — upload and chat with any PDF" loading="eager" src="images/projects/pdf-ai/landing.jpg"/></div>
+<div class="project-slider-slide"><img alt="PDF AI app — PDF viewer with AI chat interface" loading="lazy" src="images/projects/pdf-ai/chat.jpg"/></div>
+</div>
+<button type="button" class="project-slider-btn project-slider-btn--prev" data-slider-prev aria-label="Previous screenshot"><span class="material-symbols-outlined text-xl">chevron_left</span></button>
+<button type="button" class="project-slider-btn project-slider-btn--next" data-slider-next aria-label="Next screenshot"><span class="material-symbols-outlined text-xl">chevron_right</span></button>
+</div>
+<div class="project-slider-footer">
+<div class="project-slider-previews" data-slider-previews></div>
+<span class="project-slider-counter" data-slider-counter>1 / 2</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Coach AI -->
+<article class="glass-card rounded-2xl overflow-hidden" id="coach-ai-project">
+<div class="project-card-grid grid lg:grid-cols-2 gap-4 lg:gap-0">
+<div class="p-4 sm:p-stack-lg lg:p-12 flex flex-col justify-center order-2 lg:order-1 min-w-0 lg:max-h-none lg:overflow-visible">
+<span class="font-label-sm text-tertiary uppercase tracking-widest mb-stack-md"></span>
+<h3 class="font-headline-md md:text-headline-lg text-on-surface mb-stack-sm">Coach AI</h3>
+<p class="font-label-md text-primary mb-stack-sm">MERN Stack Developer · React, Node.js, MySQL</p>
+<p class="font-label-sm text-on-surface-variant mb-stack-lg">Discover the Power of AI — business coaching platform</p>
+<div class="space-y-stack-lg mb-stack-lg">
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Project Overview</h4>
+<p class="font-body-md text-on-surface-variant">Coach AI is a state-of-the-art platform built for professional growth—combining business coaching workflows with an AI chatbot that simplifies complex processes. Users manage accounts, personalize coaching preferences, and chat with AI in a polished, production-ready experience.</p>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Key Features</h4>
+<ul class="font-body-md text-on-surface-variant space-y-2 list-disc pl-5">
+<li>Marketing landing with features, onboarding steps, and social proof</li>
+<li>AI chat with history, multilingual support, and real-time messaging</li>
+<li>Blog, categories, and content pages for engagement</li>
+<li>API-integrated MERN stack with MySQL persistence</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Key Technologies</h4>
+<div class="flex gap-2 flex-wrap">
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">React</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">Node.js</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">MySQL</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">MERN</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">AI Chatbot</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">API Integration</span>
+</div>
+</div>
+</div>
+
+</div>
+<div class="project-slider-col order-1 lg:order-2 p-4 sm:p-stack-md lg:p-stack-lg">
+<div class="project-slider" data-project-slider data-slider-label="Coach AI screenshots">
+<div class="project-slider-viewport" tabindex="0" aria-roledescription="carousel" aria-label="Coach AI screenshots">
+<div class="project-slider-track">
+<div class="project-slider-slide"><img alt="Coach AI landing — Discover the Power of Coach AI" loading="eager" src="images/projects/coach-ai/hero.jpg"/></div>
+<div class="project-slider-slide"><img alt="Coach AI chat application with conversation history" loading="lazy" src="images/projects/coach-ai/chat.jpg"/></div>
+<div class="project-slider-slide"><img alt="Coach AI full landing page — features and onboarding" loading="lazy" src="images/projects/coach-ai/landing.jpg"/></div>
+<div class="project-slider-slide"><img alt="Coach AI blog and category pages" loading="lazy" src="images/projects/coach-ai/blog.jpg"/></div>
+</div>
+<button type="button" class="project-slider-btn project-slider-btn--prev" data-slider-prev aria-label="Previous screenshot"><span class="material-symbols-outlined text-xl">chevron_left</span></button>
+<button type="button" class="project-slider-btn project-slider-btn--next" data-slider-next aria-label="Next screenshot"><span class="material-symbols-outlined text-xl">chevron_right</span></button>
+</div>
+<div class="project-slider-footer">
+<div class="project-slider-previews" data-slider-previews></div>
+<span class="project-slider-counter" data-slider-counter>1 / 4</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- DocuSure -->
+<article class="glass-card rounded-2xl overflow-hidden" id="docusure-project">
+<div class="project-card-grid grid lg:grid-cols-2 gap-4 lg:gap-0">
+<div class="p-4 sm:p-stack-lg lg:p-12 flex flex-col justify-center order-2 lg:order-1 min-w-0 lg:max-h-none lg:overflow-visible">
+<span class="font-label-sm text-secondary uppercase tracking-widest mb-stack-md"></span>
+<h3 class="font-headline-md md:text-headline-lg text-on-surface mb-stack-sm">DocuSure</h3>
+<p class="font-label-md text-primary mb-stack-sm">Full Stack Developer · React, Node.js, TypeScript</p>
+<p class="font-label-sm text-on-surface-variant mb-stack-lg">Document chase infrastructure for insurance</p>
+<div class="space-y-stack-lg mb-stack-lg">
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Project Overview</h4>
+<p class="font-body-md text-on-surface-variant">DocuSure automates insurance document chasing for brokers and underwriters. Daily emails and SMS keep customers informed of required documents, driving prompt submissions without manual follow-up—so every chase reaches completion reliably.</p>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Key Features</h4>
+<ul class="font-body-md text-on-surface-variant space-y-2 list-disc pl-5">
+<li>Dashboard analytics—chase lists, status breakdowns, and KPIs</li>
+<li>Automated chase timelines with DVLA and LexisNexis integrations</li>
+<li>Document review workflows for insurers and brokers</li>
+<li>Marketing site with insurer/broker benefits and demo requests</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Key Technologies</h4>
+<div class="flex gap-2 flex-wrap">
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">React</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">Node.js</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">TypeScript</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">PostgreSQL</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">Redis</span>
+</div>
+</div>
+</div>
+
+</div>
+<div class="project-slider-col order-1 lg:order-2 p-4 sm:p-stack-md lg:p-stack-lg">
+<div class="project-slider" data-project-slider data-slider-label="DocuSure screenshots">
+<div class="project-slider-viewport" tabindex="0" aria-roledescription="carousel" aria-label="DocuSure screenshots">
+<div class="project-slider-track">
+<div class="project-slider-slide"><img alt="DocuSure landing page — desktop and mobile" loading="eager" src="images/projects/docusure/landing.jpg"/></div>
+<div class="project-slider-slide"><img alt="DocuSure UI case study — dashboard and integrations" loading="lazy" src="images/projects/docusure/case-study.jpg"/></div>
+<div class="project-slider-slide"><img alt="DocuSure platform screens — chase list and document workflow" loading="lazy" src="images/projects/docusure/platform.jpg"/></div>
+</div>
+<button type="button" class="project-slider-btn project-slider-btn--prev" data-slider-prev aria-label="Previous screenshot"><span class="material-symbols-outlined text-xl">chevron_left</span></button>
+<button type="button" class="project-slider-btn project-slider-btn--next" data-slider-next aria-label="Next screenshot"><span class="material-symbols-outlined text-xl">chevron_right</span></button>
+</div>
+<div class="project-slider-footer">
+<div class="project-slider-previews" data-slider-previews></div>
+<span class="project-slider-counter" data-slider-counter>1 / 3</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Stream Talent -->
+<article class="glass-card rounded-2xl overflow-hidden" id="streamtalent-project">
+<div class="project-card-grid grid lg:grid-cols-2 gap-4 lg:gap-0">
+<div class="p-4 sm:p-stack-lg lg:p-12 flex flex-col justify-center order-2 lg:order-1 min-w-0 lg:max-h-none lg:overflow-visible">
+<span class="font-label-sm text-tertiary uppercase tracking-widest mb-stack-md"></span>
+<h3 class="font-headline-md md:text-headline-lg text-on-surface mb-stack-sm">Stream Talent</h3>
+<p class="font-label-md text-primary mb-stack-sm">Full Stack Developer · React, Node.js, Gatsby</p>
+<p class="font-label-sm text-on-surface-variant mb-stack-lg">Specialist recruitment platform — MVP delivered in under 3 months</p>
+<div class="space-y-stack-lg mb-stack-lg">
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Project Overview</h4>
+<p class="font-body-md text-on-surface-variant">Stream Talent connects candidates with opportunities and lets clients post jobs seamlessly. I led end-to-end MVP development—front-end, back-end, and microservice architecture—so the agency could launch a fast, scalable recruitment experience with clear paths for employers and candidates.</p>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Impact &amp; Highlights</h4>
+<ul class="font-body-md text-on-surface-variant space-y-2 list-disc pl-5">
+<li>Built the platform from scratch with a 3-person team; MVP shipped on schedule</li>
+<li>Gatsby for blazing-fast rendering; Material UI for responsive, polished UI</li>
+<li>Smart filters, smooth navigation, and mobile-first flows for higher engagement</li>
+<li>Microservices foundation for future growth and modular scaling</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Key Technologies</h4>
+<div class="flex gap-2 flex-wrap">
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">React</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">Node.js</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">Gatsby</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">JavaScript</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">Full-Stack</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">Microservices</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-tertiary/30 rounded text-tertiary bg-tertiary/5">Material UI</span>
+</div>
+</div>
+</div>
+
+</div>
+<div class="project-slider-col order-1 lg:order-2 p-4 sm:p-stack-md lg:p-stack-lg">
+<div class="project-slider" data-project-slider data-slider-label="Stream Talent screenshots">
+<div class="project-slider-viewport" tabindex="0" aria-roledescription="carousel" aria-label="Stream Talent screenshots">
+<div class="project-slider-track">
+<div class="project-slider-slide"><img alt="Stream Talent — recruitment platform overview" loading="eager" src="images/projects/streamtalent/overview.jpg"/></div>
+<div class="project-slider-slide"><img alt="Stream Talent mobile — employer and candidate flows" loading="lazy" src="images/projects/streamtalent/mobile.jpg"/></div>
+<div class="project-slider-slide"><img alt="Stream Talent employer hero landing" loading="lazy" src="images/projects/streamtalent/employer.jpg"/></div>
+<div class="project-slider-slide"><img alt="Stream Talent clients and industries" loading="lazy" src="images/projects/streamtalent/clients.jpg"/></div>
+<div class="project-slider-slide"><img alt="Stream Talent services and recruitment offerings" loading="lazy" src="images/projects/streamtalent/services.jpg"/></div>
+<div class="project-slider-slide"><img alt="Stream Talent team — experience experts" loading="lazy" src="images/projects/streamtalent/team.jpg"/></div>
+<div class="project-slider-slide"><img alt="Stream Talent contact form with smart filters" loading="lazy" src="images/projects/streamtalent/contact.jpg"/></div>
+</div>
+<button type="button" class="project-slider-btn project-slider-btn--prev" data-slider-prev aria-label="Previous screenshot"><span class="material-symbols-outlined text-xl">chevron_left</span></button>
+<button type="button" class="project-slider-btn project-slider-btn--next" data-slider-next aria-label="Next screenshot"><span class="material-symbols-outlined text-xl">chevron_right</span></button>
+</div>
+<div class="project-slider-footer">
+<div class="project-slider-previews" data-slider-previews></div>
+<span class="project-slider-counter" data-slider-counter>1 / 7</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Mediox -->
+<article class="glass-card rounded-2xl overflow-hidden" id="mediox-project">
+<div class="project-card-grid grid lg:grid-cols-2 gap-4 lg:gap-0">
+<div class="p-4 sm:p-stack-lg lg:p-12 flex flex-col justify-center order-2 lg:order-1 min-w-0 lg:max-h-none lg:overflow-visible">
+<span class="font-label-sm text-primary uppercase tracking-widest mb-stack-md"></span>
+<h3 class="font-headline-md md:text-headline-lg text-on-surface mb-stack-sm">Mediox</h3>
+<p class="font-label-md text-primary mb-stack-sm">MERN Stack Developer · Next.js, Node.js</p>
+<p class="font-label-sm text-on-surface-variant mb-stack-lg">Caring for your health — HIPAA-compliant health management</p>
+<div class="space-y-stack-lg mb-stack-lg">
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Project Overview</h4>
+<p class="font-body-md text-on-surface-variant">Mediox is a HIPAA-compliant health management platform for comprehensive care and personalized wellness—health dashboards, records, appointments, telemedicine, and secure provider communication in one user-centric experience.</p>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Key Features</h4>
+<ul class="font-body-md text-on-surface-variant space-y-2 list-disc pl-5">
+<li>Personalized health dashboard, records, and appointment scheduling</li>
+<li>Health tracking, analytics, and goal-based wellness recommendations</li>
+<li>Telemedicine, encrypted messaging, and emergency access tools</li>
+<li>Payment integration; deployed on AWS EC2 with HIPAA-aware architecture</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Key Technologies</h4>
+<div class="flex gap-2 flex-wrap">
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">React</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">Next.js</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">Node.js</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">MERN</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">HIPAA</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">Amazon EC2</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-tertiary/30 rounded text-tertiary bg-tertiary/5">Stripe</span>
+</div>
+</div>
+</div>
+
+</div>
+<div class="project-slider-col order-1 lg:order-2 p-4 sm:p-stack-md lg:p-stack-lg">
+<div class="project-slider" data-project-slider data-slider-label="Mediox screenshots">
+<div class="project-slider-viewport" tabindex="0" aria-roledescription="carousel" aria-label="Mediox screenshots">
+<div class="project-slider-track">
+<div class="project-slider-slide"><img alt="Mediox healthcare platform — landing and specialty services" loading="eager" src="images/projects/mediox/platform.jpg"/></div>
+</div>
+<button type="button" class="project-slider-btn project-slider-btn--prev" data-slider-prev aria-label="Previous screenshot"><span class="material-symbols-outlined text-xl">chevron_left</span></button>
+<button type="button" class="project-slider-btn project-slider-btn--next" data-slider-next aria-label="Next screenshot"><span class="material-symbols-outlined text-xl">chevron_right</span></button>
+</div>
+<div class="project-slider-footer">
+<div class="project-slider-previews" data-slider-previews></div>
+<span class="project-slider-counter" data-slider-counter>1 / 1</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- MyTicket App -->
+<article class="glass-card rounded-2xl overflow-hidden" id="myticket-project">
+<div class="project-card-grid grid lg:grid-cols-2 gap-4 lg:gap-0">
+<div class="p-4 sm:p-stack-lg lg:p-12 flex flex-col justify-center order-2 lg:order-1 min-w-0 lg:max-h-none lg:overflow-visible">
+<span class="font-label-sm text-secondary uppercase tracking-widest mb-stack-md"></span>
+<h3 class="font-headline-md md:text-headline-lg text-on-surface mb-stack-sm">MyTicket App</h3>
+<p class="font-label-md text-primary mb-stack-sm">Backend Developer · Node.js, Express.js</p>
+<p class="font-label-sm text-on-surface-variant mb-stack-lg">Ticketing &amp; event booking for tourists and organisers</p>
+<div class="space-y-stack-lg mb-stack-lg">
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Project Overview</h4>
+<p class="font-body-md text-on-surface-variant">MyTicket is a mobile-first ticketing and event booking platform for tourists and event organisers—discover events and experiences, book tickets with QR check-in, and connect with local guides (Murshid). I built the server-side foundation that powers bookings, listings, and operator workflows.</p>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">My Role</h4>
+<ul class="font-body-md text-on-surface-variant space-y-2 list-disc pl-5">
+<li>RESTful APIs with Node.js and Express.js for events, tickets, and user accounts</li>
+<li>Admin analytics and dashboards for organisers and platform operators</li>
+<li>Backend integration supporting the Flutter mobile client and booking flows</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Key Technologies</h4>
+<div class="flex gap-2 flex-wrap">
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">Node.js</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">Express.js</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">RESTful API</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">MongoDB</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">Flutter</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">Admin Dashboard</span>
+</div>
+</div>
+</div>
+
+</div>
+<div class="project-slider-col order-1 lg:order-2 p-4 sm:p-stack-md lg:p-stack-lg">
+<div class="project-slider" data-project-slider data-slider-label="MyTicket App screenshots">
+<div class="project-slider-viewport" tabindex="0" aria-roledescription="carousel" aria-label="MyTicket App screenshots">
+<div class="project-slider-track">
+<div class="project-slider-slide"><img alt="MyTicket — mobile app design and development showcase" loading="eager" src="images/projects/myticket/overview.jpg"/></div>
+<div class="project-slider-slide"><img alt="MyTicket — splash screen and discover home" loading="lazy" src="images/projects/myticket/hero.jpg"/></div>
+<div class="project-slider-slide"><img alt="MyTicket — onboarding, sign up, and profile flows" loading="lazy" src="images/projects/myticket/onboarding.jpg"/></div>
+<div class="project-slider-slide"><img alt="MyTicket — ticket booking, QR pass, and Murshid guides" loading="lazy" src="images/projects/myticket/booking.jpg"/></div>
+<div class="project-slider-slide"><img alt="MyTicket — events, experiences, and profile screens" loading="lazy" src="images/projects/myticket/screens.jpg"/></div>
+</div>
+<button type="button" class="project-slider-btn project-slider-btn--prev" data-slider-prev aria-label="Previous screenshot"><span class="material-symbols-outlined text-xl">chevron_left</span></button>
+<button type="button" class="project-slider-btn project-slider-btn--next" data-slider-next aria-label="Next screenshot"><span class="material-symbols-outlined text-xl">chevron_right</span></button>
+</div>
+<div class="project-slider-footer">
+<div class="project-slider-previews" data-slider-previews></div>
+<span class="project-slider-counter" data-slider-counter>1 / 5</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Trilok Propco -->
+<article class="glass-card rounded-2xl overflow-hidden" id="trilok-propco-project">
+<div class="project-card-grid grid lg:grid-cols-2 gap-4 lg:gap-0">
+<div class="p-4 sm:p-stack-lg lg:p-12 flex flex-col justify-center order-2 lg:order-1 min-w-0 lg:max-h-none lg:overflow-visible">
+<span class="font-label-sm text-tertiary uppercase tracking-widest mb-stack-md"></span>
+<h3 class="font-headline-md md:text-headline-lg text-on-surface mb-stack-sm">Trilok Propco</h3>
+<p class="font-label-md text-primary mb-stack-sm">Full Stack Web Developer · React, Node.js, MongoDB</p>
+<p class="font-label-sm text-on-surface-variant mb-stack-lg">Luxury residential real estate — zero brokerage, Kolkata</p>
+<div class="space-y-stack-lg mb-stack-lg">
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Project Overview</h4>
+<p class="font-body-md text-on-surface-variant">Trilok Propco is a real estate platform for luxury residential properties in Kolkata—under-construction and ready-to-move homes with no brokerage fees. I built the full stack with React, Node.js, Express, and MongoDB, including secure admin and user dashboards, property search with map views, blogs, and side-by-side comparison.</p>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Key Features</h4>
+<ul class="font-body-md text-on-surface-variant space-y-2 list-disc pl-5">
+<li>Homepage with featured projects, city exploration, and advanced property search</li>
+<li>Explore Properties — filters, residential/commercial tabs, and Leaflet map integration</li>
+<li>Blog hub with category filters and property comparison tool</li>
+<li>JWT-secured dashboards; deployed on AWS EC2</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-secondary uppercase tracking-widest mb-stack-sm">Key Technologies</h4>
+<div class="flex gap-2 flex-wrap">
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">React</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">Node.js</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">Express.js</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-secondary/30 rounded text-secondary bg-secondary/5">MongoDB</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">JWT</span>
+<span class="text-[10px] font-label-sm px-2 py-0.5 border border-primary/30 rounded text-primary bg-primary/5">Amazon EC2</span>
+</div>
+</div>
+</div>
+
+</div>
+<div class="project-slider-col order-1 lg:order-2 p-4 sm:p-stack-md lg:p-stack-lg">
+<div class="project-slider" data-project-slider data-slider-label="Trilok Propco screenshots">
+<div class="project-slider-viewport" tabindex="0" aria-roledescription="carousel" aria-label="Trilok Propco screenshots">
+<div class="project-slider-track">
+<div class="project-slider-slide"><img alt="Trilok Propco — homepage with featured luxury properties" loading="eager" src="images/projects/trilok-propco/landing.jpg"/></div>
+<div class="project-slider-slide"><img alt="Trilok Propco — explore properties with map and filters" loading="lazy" src="images/projects/trilok-propco/properties.jpg"/></div>
+<div class="project-slider-slide"><img alt="Trilok Propco — explore blogs with category filters" loading="lazy" src="images/projects/trilok-propco/blogs.jpg"/></div>
+<div class="project-slider-slide"><img alt="Trilok Propco — compare properties side by side" loading="lazy" src="images/projects/trilok-propco/compare.jpg"/></div>
+</div>
+<button type="button" class="project-slider-btn project-slider-btn--prev" data-slider-prev aria-label="Previous screenshot"><span class="material-symbols-outlined text-xl">chevron_left</span></button>
+<button type="button" class="project-slider-btn project-slider-btn--next" data-slider-next aria-label="Next screenshot"><span class="material-symbols-outlined text-xl">chevron_right</span></button>
+</div>
+<div class="project-slider-footer">
+<div class="project-slider-previews" data-slider-previews></div>
+<span class="project-slider-counter" data-slider-counter>1 / 4</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Workflow & mindset -->
+<section class="max-w-container-max mx-auto section-pad-x section-y reveal" id="workflow">
+<div class="workflow-inner bg-gradient-to-b from-primary/5 to-transparent p-6 sm:p-10 md:p-12 rounded-2xl sm:rounded-[40px] border border-primary/10">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-stack-md">How I Work</h2>
+<p class="workflow-intro font-body-lg text-on-surface-variant max-w-2xl mx-auto">How I approach product engineering on cross-functional teams—clarify goals, design for scale, ship incrementally, and iterate with stakeholders.</p>
+</div>
+<div class="relative flex flex-col md:flex-row items-stretch md:items-center justify-center gap-8 md:gap-10 lg:gap-12">
+<!-- Step 1 -->
+<div class="workflow-step-card glass-card p-6 sm:p-stack-lg rounded-2xl w-full relative z-10 animate-float" style="animation-delay: 0s;">
+<span class="workflow-step-label text-secondary block">Step 01</span>
+<h4 class="workflow-step-title">Listen &amp; Clarify</h4>
+<p class="workflow-step-body">Start with users, goals, and constraints—not the stack. I ask the right questions so we build what actually matters.</p>
+</div>
+<!-- Connection -->
+<div class="hidden md:block w-20 h-0.5 bg-gradient-to-r from-secondary to-primary relative shrink-0 self-center">
+<div class="absolute -right-1 -top-1 w-2 h-2 bg-primary rounded-full animate-ping"></div>
+</div>
+<!-- Step 2 -->
+<div class="workflow-step-card glass-card p-6 sm:p-stack-lg rounded-2xl w-full relative z-10 animate-float" style="animation-delay: 1s;">
+<span class="workflow-step-label text-primary block">Step 02</span>
+<h4 class="workflow-step-title">Architect &amp; Plan</h4>
+<p class="workflow-step-body">Sketch the system—APIs, data flow, and milestones—so the app stays simple today and scalable tomorrow.</p>
+</div>
+<!-- Connection -->
+<div class="hidden md:block w-20 h-0.5 bg-gradient-to-r from-primary to-tertiary relative shrink-0 self-center">
+<div class="absolute -right-1 -top-1 w-2 h-2 bg-tertiary rounded-full animate-ping"></div>
+</div>
+<!-- Step 3 -->
+<div class="workflow-step-card glass-card p-6 sm:p-stack-lg rounded-2xl w-full relative z-10 animate-float" style="animation-delay: 2s;">
+<span class="workflow-step-label text-tertiary block">Step 03</span>
+<h4 class="workflow-step-title">Ship &amp; Refine</h4>
+<p class="workflow-step-body">Deliver working slices early, test with real users, polish UX, and iterate—production quality, not endless prototypes.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="max-w-container-max mx-auto section-pad-x section-y reveal" id="contact">
+<div class="glass-card rounded-[40px] border border-primary/20 bg-gradient-to-b from-primary/10 to-transparent p-stack-lg md:p-16 text-center max-w-3xl mx-auto relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent pointer-events-none"></div>
+<div class="relative z-10">
+<span class="font-label-sm text-secondary uppercase tracking-[0.2em] mb-stack-md block">For recruiters</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-stack-md">Interested in my profile?</h2>
+<p class="font-body-lg text-on-surface-variant max-w-xl mx-auto mb-stack-lg">I&apos;m exploring full-time and senior full-stack roles—remote-friendly, with experience in microservices, AWS, and leading delivery on production products.</p>
+<div class="contact-details">
+<a href="mailto:mynameisnaveensingh@gmail.com">
+<span class="material-symbols-outlined" aria-hidden="true">mail</span>
+mynameisnaveensingh@gmail.com
+</a>
+<a href="tel:+917710368332">
+<span class="material-symbols-outlined" aria-hidden="true">call</span>
++91 77103 68332
+</a>
+</div>
+<div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-stack-md">
+<a class="bg-primary text-on-primary px-10 py-4 rounded-full font-label-md glow-button transition-all active:scale-95 inline-flex items-center gap-2 w-full sm:w-auto justify-center" href="Naveen-Singh-CV.pdf" download="Naveen-Singh-CV.pdf">
+<span class="material-symbols-outlined text-xl">download</span>
+Download CV
+</a>
+<a class="border border-outline-variant hover:border-primary px-10 py-4 rounded-full font-label-md transition-all inline-flex items-center gap-2 w-full sm:w-auto justify-center backdrop-blur-sm" href="https://www.linkedin.com/in/developernaveen7/" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-xl">link</span>
+Message on LinkedIn
+</a>
+<a class="border border-outline-variant hover:border-primary px-10 py-4 rounded-full font-label-md transition-all inline-flex items-center gap-2 w-full sm:w-auto justify-center backdrop-blur-sm" href="#experience">
+<span class="material-symbols-outlined text-xl">history_edu</span>
+View experience
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+<span class="material-symbols-outlined text-2xl">keyboard_arrow_up</span>
+</button>
+<!-- Footer -->
+<footer class="bg-surface border-t border-white/5 w-full py-stack-lg">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto section-pad-x gap-stack-md py-2">
+<a class="site-logo shrink-0" href="#top" aria-label="Naveen Singh — back to top"><span class="site-logo__mark">NS</span><span class="site-logo__text"><span class="site-logo__given">Naveen</span> <span class="site-logo__family">Singh</span></span></a>
+
+<div class="flex flex-wrap items-center justify-center gap-x-stack-lg gap-y-2">
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-sm" href="mailto:mynameisnaveensingh@gmail.com">Email</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-sm" href="tel:+917710368332">Phone</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-sm" href="https://www.linkedin.com/in/developernaveen7/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm" href="Naveen-Singh-CV.pdf" download="Naveen-Singh-CV.pdf">CV</a>
+</div>
+</div>
+</footer>
+<script>
+        // Typing Animation
+        const phrases = [
+    "Full Stack Developer & Team Lead",
+    "Microservices & cloud-native systems on AWS",
+    "React, Node.js, and production-grade APIs",
+    "Scalable products from architecture to release",
+    "Open to senior full-stack opportunities",
+];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 100;
+
+        function type() {
+            const typingText = document.getElementById("typing-text");
+            if (!typingText) return;
+
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                typingText.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 50;
+            } else {
+                typingText.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 100;
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                typeSpeed = 2000; // Pause at end
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+        document.addEventListener('DOMContentLoaded', type);
+
+        // Neural Network Background Canvas with Interaction
+        const canvas = document.getElementById('neuralCanvas');
+        const ctx = canvas ? canvas.getContext('2d') : null;
+        let particles = [];
+        let mouse = { x: null, y: null, radius: 150 };
+
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.x;
+            mouse.y = e.y;
+        });
+
+        function init() {
+            if (!canvas || !ctx) return;
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            particles = [];
+            const particleCount = (canvas.width * canvas.height) / 15000;
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5,
+                    size: Math.random() * 1.5 + 0.5,
+                    color: Math.random() > 0.5 ? '#c0c1ff' : '#4cd7f6'
+                });
+            }
+        }
+
+        function draw() {
+            if (!canvas || !ctx) return;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            particles.forEach((p, index) => {
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+                // Mouse reaction
+                if (mouse.x) {
+                    const dx = mouse.x - p.x;
+                    const dy = mouse.y - p.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance < mouse.radius) {
+                        const force = (mouse.radius - distance) / mouse.radius;
+                        p.x -= dx * force * 0.02;
+                        p.y -= dy * force * 0.02;
+                    }
+                }
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fillStyle = p.color;
+                ctx.globalAlpha = 0.4;
+                ctx.fill();
+
+                for (let j = index + 1; j < particles.length; j++) {
+                    const p2 = particles[j];
+                    const dx = p.x - p2.x;
+                    const dy = p.y - p2.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < 150) {
+                        ctx.lineWidth = 0.5;
+                        ctx.strokeStyle = p.color;
+                        ctx.globalAlpha = (1 - (dist / 150)) * 0.2;
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                }
+            });
+            ctx.globalAlpha = 1;
+            requestAnimationFrame(draw);
+        }
+
+        window.addEventListener('resize', init);
+        init();
+        draw();
+
+        // Scroll Reveal Implementation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        function revealIfInView(el) {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.95 && rect.bottom > 0) {
+                el.classList.add('active');
+            }
+        }
+
+        document.querySelectorAll('.reveal').forEach((el) => {
+            revealObserver.observe(el);
+            revealIfInView(el);
+        });
+
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.reveal').forEach(revealIfInView);
+            if (location.hash) {
+                const hashTarget = document.querySelector(location.hash);
+                if (hashTarget) {
+                    hashTarget.classList.add('active');
+                    hashTarget.querySelectorAll('.reveal').forEach((el) => el.classList.add('active'));
+                    hashTarget.scrollIntoView({ behavior: 'auto', block: 'start' });
+                }
+            } else {
+                window.scrollTo(0, 0);
+            }
+        });
+
+        // Project image sliders (all projects)
+        document.querySelectorAll('[data-project-slider]').forEach((slider) => {
+            const viewport = slider.querySelector('.project-slider-viewport');
+            const track = slider.querySelector('.project-slider-track');
+            const slides = slider.querySelectorAll('.project-slider-slide');
+            const previewsContainer = slider.querySelector('[data-slider-previews]');
+            const counter = slider.querySelector('[data-slider-counter]');
+            const prevBtns = slider.querySelectorAll('[data-slider-prev]');
+            const nextBtns = slider.querySelectorAll('[data-slider-next]');
+            const label = slider.dataset.sliderLabel || 'Project screenshots';
+            if (!viewport || !track || !slides.length) return;
+
+            let index = 0;
+            const total = slides.length;
+            let touchStartX = 0;
+            let touchDeltaX = 0;
+            const previews = [];
+
+            slides.forEach((slide, i) => {
+                const slideImg = slide.querySelector('img');
+                if (!previewsContainer || !slideImg) return;
+                const thumb = document.createElement('button');
+                thumb.type = 'button';
+                thumb.className = 'project-slider-preview' + (i === 0 ? ' active' : '');
+                const labelText = slideImg.alt || `Screenshot ${i + 1}`;
+                thumb.setAttribute('aria-label', labelText);
+                const thumbImg = document.createElement('img');
+                thumbImg.src = slideImg.getAttribute('src') || '';
+                thumbImg.alt = '';
+                thumbImg.loading = 'lazy';
+                thumb.appendChild(thumbImg);
+                thumb.addEventListener('click', () => goTo(i));
+                previewsContainer.appendChild(thumb);
+                previews.push(thumb);
+            });
+
+            function scrollActivePreview() {
+                const thumb = previews[index];
+                if (!thumb || !previewsContainer) return;
+                const pad = 8;
+                const thumbStart = thumb.offsetLeft - pad;
+                const thumbEnd = thumb.offsetLeft + thumb.offsetWidth + pad;
+                const viewStart = previewsContainer.scrollLeft;
+                const viewEnd = viewStart + previewsContainer.clientWidth;
+                if (thumbStart < viewStart) {
+                    previewsContainer.scrollLeft = thumbStart;
+                } else if (thumbEnd > viewEnd) {
+                    previewsContainer.scrollLeft = thumbEnd - previewsContainer.clientWidth;
+                }
+            }
+
+            function layoutSlides() {
+                const w = viewport.clientWidth;
+                slides.forEach((slide) => {
+                    slide.style.flexBasis = `${w}px`;
+                    slide.style.width = `${w}px`;
+                });
+            }
+
+            function updateUI(scrollPreview) {
+                const offset = index * viewport.clientWidth;
+                track.style.transform = `translate3d(-${offset}px, 0, 0)`;
+                if (counter) counter.textContent = `${index + 1} / ${total}`;
+                previews.forEach((thumb, i) => thumb.classList.toggle('active', i === index));
+                viewport.setAttribute('aria-label', `${label}, ${index + 1} of ${total}`);
+                if (scrollPreview) scrollActivePreview();
+            }
+
+            function goTo(i) {
+                index = ((i % total) + total) % total;
+                updateUI(true);
+            }
+
+            function step(dir) {
+                goTo(index + dir);
+            }
+
+            function onSliderResize() {
+                layoutSlides();
+                updateUI(false);
+            }
+
+            prevBtns.forEach((btn) => btn.addEventListener('click', () => step(-1)));
+            nextBtns.forEach((btn) => btn.addEventListener('click', () => step(1)));
+
+            viewport.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') { e.preventDefault(); step(-1); }
+                if (e.key === 'ArrowRight') { e.preventDefault(); step(1); }
+            });
+
+            viewport.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].clientX;
+                touchDeltaX = 0;
+            }, { passive: true });
+
+            viewport.addEventListener('touchmove', (e) => {
+                touchDeltaX = e.changedTouches[0].clientX - touchStartX;
+            }, { passive: true });
+
+            viewport.addEventListener('touchend', () => {
+                if (Math.abs(touchDeltaX) < 40) return;
+                if (touchDeltaX < 0) step(1);
+                else step(-1);
+            });
+
+            slides.forEach((slide) => {
+                const img = slide.querySelector('img');
+                if (img && !img.complete) {
+                    img.addEventListener('load', onSliderResize, { once: true });
+                }
+            });
+
+            layoutSlides();
+            updateUI(false);
+
+            if (typeof ResizeObserver !== 'undefined') {
+                const ro = new ResizeObserver(onSliderResize);
+                ro.observe(viewport);
+            } else {
+                window.addEventListener('resize', onSliderResize);
+            }
+
+            requestAnimationFrame(onSliderResize);
+        });
+
+        // Back to top
+        const backToTop = document.getElementById('back-to-top');
+        if (backToTop) {
+            const toggleBackToTop = () => {
+                backToTop.classList.toggle('visible', window.scrollY > 400);
+            };
+            toggleBackToTop();
+            window.addEventListener('scroll', toggleBackToTop, { passive: true });
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                closeNavMobile?.();
+            });
+        }
+
+        // Mobile nav
+        const navToggle = document.getElementById('nav-toggle');
+        const navMobile = document.getElementById('nav-mobile');
+        const navToggleIcon = document.getElementById('nav-toggle-icon');
+
+        function closeNavMobile() {
+            navMobile?.classList.remove('open');
+            navToggle?.setAttribute('aria-expanded', 'false');
+            if (navToggleIcon) navToggleIcon.textContent = 'menu';
+        }
+
+        navToggle?.addEventListener('click', () => {
+            const isOpen = navMobile?.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            if (navToggleIcon) navToggleIcon.textContent = isOpen ? 'close' : 'menu';
+        });
+
+        navMobile?.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', closeNavMobile);
+        });
+
+        // Navigation Link Interaction
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                e.preventDefault();
+                const target = document.querySelector(targetId);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    if (target.classList.contains('reveal')) {
+                        target.classList.add('active');
+                    }
+                    target.querySelectorAll('.reveal').forEach((el) => el.classList.add('active'));
+                    setTimeout(() => {
+                        document.querySelectorAll('.reveal').forEach(revealIfInView);
+                    }, 600);
+                }
+            });
+        });
+    </script>
+</body></html>
